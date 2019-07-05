@@ -1,0 +1,13 @@
+.region-list {
+  div {
+    button {
+      width: 100% !important;
+    }
+  }
+
+  .selected {
+    button {
+      background-color: yellow;
+    }
+  }
+}

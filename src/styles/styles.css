@@ -1,0 +1,62 @@
+.icon_rotate_90 {
+    -ms-transform: rotate(90deg); /* IE 9 */
+    -webkit-transform: rotate(90deg); /* Chrome, Safari, Opera */
+    transform: rotate(90deg);
+}
+
+.ant-layout-header,
+.ant-layout-footer {
+    background: #7dbcea;
+    color: #fff;
+}
+
+.ant-layout-footer {
+    line-height: 1.5;
+}
+
+.ant-layout-content {
+    background: rgba(16, 142, 233, 1);
+    color: #fff;
+    min-height: 120px;
+    line-height: 120px;
+}
+
+@font-face {
+    font-family: 'Spoqa Han Sans';
+    font-weight: 700;
+    src: local('Spoqa Han Sans Bold'),
+    url('./fonts/SpoqaHanSansBold.woff2') format('woff2'),
+    url('./fonts/SpoqaHanSansBold.woff') format('woff'),
+    url('./fonts/SpoqaHanSansBold.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Spoqa Han Sans';
+    font-weight: 400;
+    src: local('Spoqa Han Sans Regular'),
+    url('./fonts/SpoqaHanSansRegular.woff2') format('woff2'),
+    url('./fonts/SpoqaHanSansRegular.woff') format('woff'),
+    url('./fonts/SpoqaHanSansRegular.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Spoqa Han Sans';
+    font-weight: 300;
+    src: local('Spoqa Han Sans Light'),
+    url('./fonts/SpoqaHanSansLight.woff2') format('woff2'),
+    url('./fonts/SpoqaHanSansLight.woff') format('woff'),
+    url('./fonts/SpoqaHanSansLight.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Spoqa Han Sans';
+    font-weight: 100;
+    src: local('Spoqa Han Sans Thin'),
+    url('./fonts/SpoqaHanSansThin.woff2') format('woff2'),
+    url('./fonts/SpoqaHanSansThin.woff') format('woff'),
+    url('./fonts/SpoqaHanSansThin.ttf') format('truetype');
+}
+
+* {
+    font-family: 'Spoqa Han Sans', 'Spoqa Han Sans JP', 'Sans-serif';
+}

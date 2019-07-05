@@ -1,0 +1,621 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="ab4c054b-59f6-4fda-92eb-f68f548fad0a" name="Default Changelist" comment="" />
+    <ignored path="$PROJECT_DIR$/.tmp/" />
+    <ignored path="$PROJECT_DIR$/temp/" />
+    <ignored path="$PROJECT_DIR$/tmp/" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/../siseme-ui/package.json">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="368">
+              <caret line="48" lean-forward="true" selection-start-line="48" selection-end-line="48" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>getData</find>
+      <find>deals-list</find>
+      <find>hasmore</find>
+      <find>dateName</find>
+      <find>console.log</find>
+      <find>console.l</find>
+      <find>console</find>
+      <find>.push</find>
+      <find>hasMore</find>
+      <find>home</find>
+      <find>antd/</find>
+      <find>RegionContainer</find>
+      <find>QueryContainer</find>
+      <find>search</find>
+      <find>.search</find>
+      <find>.handleRegion</find>
+      <find>handleRegion</find>
+      <find>region.code === 'apt'</find>
+      <find>apt</find>
+      <find>'apt'</find>
+      <find>getApt</find>
+      <find>getDealsList</find>
+      <find>dealsList</find>
+      <find>전체</find>
+      <find>maxPrice</find>
+      <find>최신순</find>
+      <find>sortType</find>
+      <find>handleSort</find>
+      <find>handleOrder</find>
+      <find>https://sise.me</find>
+    </findStrings>
+    <replaceStrings>
+      <replace>.list</replace>
+      <replace>list</replace>
+      <replace>.main</replace>
+      <replace>.departure</replace>
+      <replace>.destination</replace>
+      <replace>this.props</replace>
+      <replace>thi</replace>
+      <replace>rootStore.selectedRoute.path</replace>
+      <replace>rootStore.selectedRoute</replace>
+      <replace>rootStore</replace>
+      <replace>rootStore.parking</replace>
+      <replace>item</replace>
+      <replace>.detail-</replace>
+      <replace>rootStore.summaryPath.</replace>
+      <replace>rootStore.summaryPath[0]</replace>
+      <replace>rootStore.path</replace>
+      <replace>props.</replace>
+      <replace>props.item.</replace>
+      <replace>courseStore</replace>
+      <replace>courseList</replace>
+      <replace>routeStore</replace>
+      <replace>x.subPath.trafficType</replace>
+      <replace>x.subPath.sectionTime</replace>
+      <replace>props.item.info.totalTime</replace>
+      <replace>127.0.0.1:8080</replace>
+      <replace>gungu</replace>
+      <replace>dong</replace>
+      <replace>apt</replace>
+      <replace>searchStore</replace>
+      <replace>http://localhost:8080</replace>
+    </replaceStrings>
+    <dirStrings>
+      <dir>$PROJECT_DIR$/src/components/destination</dir>
+      <dir>$PROJECT_DIR$/src/components/place</dir>
+      <dir>$PROJECT_DIR$/src/components/route</dir>
+      <dir>$PROJECT_DIR$/src/components/region</dir>
+      <dir>$PROJECT_DIR$/src</dir>
+      <dir>$PROJECT_DIR$/src/components</dir>
+      <dir>$PROJECT_DIR$/src/components/deals/search</dir>
+      <dir>$PROJECT_DIR$/src/components/deals/search/region</dir>
+      <dir>$PROJECT_DIR$</dir>
+    </dirStrings>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/src/components/home/Home.scss" />
+        <option value="$PROJECT_DIR$/src/components/home/Home.js" />
+        <option value="$PROJECT_DIR$/src/components/home/HomeContainer.js" />
+        <option value="$PROJECT_DIR$/src/components/list/DealsList.scss" />
+        <option value="$PROJECT_DIR$/src/components/list/DealsSearch.scss" />
+        <option value="$PROJECT_DIR$/src/components/list/DealsSearch.js" />
+        <option value="$PROJECT_DIR$/src/components/search/query/QueryContainer.js" />
+        <option value="$PROJECT_DIR$/src/components/common/SearchBar.js" />
+        <option value="$PROJECT_DIR$/src/components/common/SearchBar.scss" />
+        <option value="$PROJECT_DIR$/src/components/search/query/QueryResult.js" />
+        <option value="$PROJECT_DIR$/src/components/list/DealsList.js" />
+        <option value="$PROJECT_DIR$/src/components/list/ListContainer.js" />
+        <option value="$PROJECT_DIR$/src/components/deals/result/DealsList.js" />
+        <option value="$PROJECT_DIR$/src/components/deals/result/ListContainer.js" />
+        <option value="$PROJECT_DIR$/src/components/deals/search/region/region/common/RegionList.js" />
+        <option value="$PROJECT_DIR$/src/components/deals/search/query/QueryInput.js" />
+        <option value="$PROJECT_DIR$/src/components/deals/search/query/QueryResult.js" />
+        <option value="$PROJECT_DIR$/src/components/deals/search/region/region/common/RegionTable.js" />
+        <option value="$PROJECT_DIR$/src/components/deals/search/region/region/AptTable.js" />
+        <option value="$PROJECT_DIR$/src/components/deals/search/region/region/DongTable.js" />
+        <option value="$PROJECT_DIR$/src/components/deals/search/region/region/GunguTable.js" />
+        <option value="$PROJECT_DIR$/src/components/deals/search/region/region/SidoTable.js" />
+        <option value="$PROJECT_DIR$/src/components/deals/search/region/region/RegionTable.js" />
+        <option value="$PROJECT_DIR$/src/components/deals/search/query/QueryContainer.js" />
+        <option value="$PROJECT_DIR$/src/components/deals/search/region/QueryResult.js" />
+        <option value="$PROJECT_DIR$/src/components/deals/search/region/RegionBar.scss" />
+        <option value="$PROJECT_DIR$/src/components/common/SearchSubTabs.js" />
+        <option value="$PROJECT_DIR$/src/components/common/SearchTabs.js" />
+        <option value="$PROJECT_DIR$/src/components/common/CommonTabs.js" />
+        <option value="$PROJECT_DIR$/src/components/common/CommonTabs.scss" />
+        <option value="$PROJECT_DIR$/src/components/common/CommonSubTabs.js" />
+        <option value="$PROJECT_DIR$/src/components/common/CommonSubTabs.scss" />
+        <option value="$PROJECT_DIR$/src/components/deals/search/region/RegionBar.js" />
+        <option value="$PROJECT_DIR$/src/components/deals/search/region/RegionContainer.js" />
+        <option value="$PROJECT_DIR$/src/components/deals/search/RegionContainer.js" />
+        <option value="$PROJECT_DIR$/src/components/search/SearchContainer.js" />
+        <option value="$PROJECT_DIR$/src/components/deals/search/query/QueryTable.scss" />
+        <option value="$PROJECT_DIR$/src/components/deals/search/query/QueryBar.js" />
+        <option value="$PROJECT_DIR$/src/components/deals/search/query/QueryTable.js" />
+        <option value="$PROJECT_DIR$/src/components/common/CommonSearchBar.js" />
+        <option value="$PROJECT_DIR$/src/App.js" />
+        <option value="$PROJECT_DIR$/src/components/deals/search/region/RegionTable.js" />
+        <option value="$PROJECT_DIR$/src/components/deals/search/DealsSearchContainer.js" />
+        <option value="$PROJECT_DIR$/src/components/deals/result/DealsTable.scss" />
+        <option value="$PROJECT_DIR$/src/components/deals/result/DealsHeader.scss" />
+        <option value="$PROJECT_DIR$/src/components/deals/result/DealsHeader.js" />
+        <option value="$PROJECT_DIR$/src/components/deals/result/DealsResultContainer.js" />
+        <option value="$PROJECT_DIR$/src/components/deals/result/DealsTable.js" />
+        <option value="$PROJECT_DIR$/src/stores/SearchStore.js" />
+        <option value="$PROJECT_DIR$/src/api/index.js" />
+        <option value="$PROJECT_DIR$/../siseme-ui/package.json" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="720" />
+    <option name="y" value="23" />
+    <option name="width" value="720" />
+    <option name="height" value="877" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="siseme-ui" type="b2602c69:ProjectViewProjectNode" />
+              <item name="siseme-ui" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="Scope" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="nodejs_package_manager_path" value="yarn" />
+    <property name="settings.editor.selected.configurable" value="preferences.sourceCode" />
+    <property name="ts.external.directory.path" value="$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/components/home" />
+      <recent name="$PROJECT_DIR$/src/components/region/common" />
+      <recent name="$PROJECT_DIR$/src/components/common" />
+      <recent name="$PROJECT_DIR$/src/components/detail" />
+      <recent name="$PROJECT_DIR$/src/components/list" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/components/deals/search/region/data" />
+      <recent name="$PROJECT_DIR$/src/components/deals/search" />
+      <recent name="$PROJECT_DIR$/src/components/common" />
+      <recent name="$PROJECT_DIR$/src/components/deals/search/region" />
+      <recent name="$PROJECT_DIR$/src/components/deals/search/region/region" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager">
+    <configuration name="start" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="start" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="npm.start" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="ab4c054b-59f6-4fda-92eb-f68f548fad0a" name="Default Changelist" comment="" />
+      <created>1558367356177</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1558367356177</updated>
+      <workItem from="1558367358884" duration="5323000" />
+      <workItem from="1558779693527" duration="32559000" />
+      <workItem from="1559213143078" duration="19229000" />
+      <workItem from="1559395845789" duration="23759000" />
+      <workItem from="1559447424965" duration="55228000" />
+      <workItem from="1561165087524" duration="608000" />
+      <workItem from="1561168269495" duration="769000" />
+      <workItem from="1561206527068" duration="37000" />
+      <workItem from="1561206693099" duration="4435000" />
+      <workItem from="1561732326101" duration="32126000" />
+      <workItem from="1561821928028" duration="17737000" />
+      <workItem from="1562301323431" duration="61000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="191871000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="0" y="23" width="1440" height="877" extended-state="6" />
+    <editor active="true" />
+    <layout>
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49129593" visible="true" weight="0.16349542" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="npm" order="2" sideWeight="0.50870407" side_tool="true" weight="0.26638478" />
+      <window_info id="Favorites" order="3" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32769832" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.32769832" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.30949286" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="8" weight="0.32899868" />
+      <window_info anchor="bottom" id="TypeScript" order="9" />
+      <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
+      <window_info anchor="bottom" id="Terminal" order="11" visible="true" weight="0.32769832" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+    </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/src/components/region/RegionAptList.scss" />
+    <entry file="file://$PROJECT_DIR$/src/components/region/RegionDongList.scss" />
+    <entry file="file://$PROJECT_DIR$/src/components/region/RegionPage.js" />
+    <entry file="file://$PROJECT_DIR$/src/components/region/RegionGunguList.js" />
+    <entry file="file://$PROJECT_DIR$/src/components/region/RegionDongList.js" />
+    <entry file="file://$PROJECT_DIR$/src/components/region/RegionAptList.js" />
+    <entry file="file://$PROJECT_DIR$/src/components/region/select/RegionAptSelect" />
+    <entry file="file://$PROJECT_DIR$/src/components/page/RegionContainer.js" />
+    <entry file="file://$PROJECT_DIR$/src/components/search/select/RegionSelectTabs.js" />
+    <entry file="file://$PROJECT_DIR$/src/components/search/select/RegionSelectTabs.scss" />
+    <entry file="file://$PROJECT_DIR$/../siseme-ui/src/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="273">
+          <caret line="13" column="15" selection-start-line="13" selection-start-column="15" selection-end-line="13" selection-end-column="15" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/search/select/RegionSelectContainer.scss" />
+    <entry file="file://$PROJECT_DIR$/src/components/common/CommonSearchTabs.scss" />
+    <entry file="file://$PROJECT_DIR$/src/components/list/CommonSearchTabs.js" />
+    <entry file="file://$PROJECT_DIR$/../siseme-ui/src/components/home/Home.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="21">
+          <caret line="1" column="2" selection-start-line="1" selection-start-column="2" selection-end-line="1" selection-end-column="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../siseme-ui/src/components/home/Home.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="373">
+          <caret line="27" column="36" lean-forward="true" selection-start-line="27" selection-start-column="36" selection-end-line="27" selection-end-column="36" />
+          <folding>
+            <element signature="e#0#39#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../siseme-ui/src/components/home/HomeContainer.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="273">
+          <caret line="13" lean-forward="true" selection-start-line="13" selection-end-line="13" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/list/DealsSearch.scss" />
+    <entry file="file://$PROJECT_DIR$/src/components/list/DealsSearch.js" />
+    <entry file="file://$PROJECT_DIR$/../siseme-ui/src/stores/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="38" selection-start-column="38" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../siseme-ui/src/components/deals/search/query/QueryBar.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="126">
+          <caret line="6" column="1" lean-forward="true" selection-start-line="6" selection-start-column="1" selection-end-line="6" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../siseme-ui/src/components/deals/search/region/RegionTable.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="252">
+          <caret line="12" column="1" lean-forward="true" selection-start-line="12" selection-start-column="1" selection-end-line="12" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../siseme-ui/src/components/deals/search/region/RegionBar.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="147">
+          <caret line="7" column="1" lean-forward="true" selection-start-line="7" selection-start-column="1" selection-end-line="7" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/deals/search/query/QueryContainer.js" />
+    <entry file="file://$PROJECT_DIR$/../siseme-ui/src/components/deals/search/query/QueryTable.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="12" selection-start-column="1" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../siseme-ui/src/components/deals/search/query/QueryBar.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="273">
+          <caret line="13" column="25" selection-start-line="13" selection-start-column="25" selection-end-line="13" selection-end-column="25" />
+          <folding>
+            <element signature="e#0#39#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../siseme-ui/src/components/deals/search/query/QueryTable.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="5" lean-forward="true" selection-start-line="5" selection-end-line="5" />
+          <folding>
+            <element signature="e#0#39#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../siseme-ui/src/components/deals/search/region/data/AptTable.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="7" lean-forward="true" selection-start-column="7" selection-end-column="7" />
+          <folding>
+            <element signature="e#0#39#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../siseme-ui/src/components/deals/search/region/data/DongTable.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="7" lean-forward="true" selection-start-column="7" selection-end-column="7" />
+          <folding>
+            <element signature="e#0#39#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../siseme-ui/src/components/deals/search/region/data/GunguTable.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="7" lean-forward="true" selection-start-column="7" selection-end-column="7" />
+          <folding>
+            <element signature="e#0#39#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../siseme-ui/src/components/deals/search/region/data/SidoTable.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="336">
+          <caret line="16" lean-forward="true" selection-start-line="16" selection-end-line="16" />
+          <folding>
+            <element signature="e#0#39#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../siseme-ui/src/components/search/SearchContainer.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="273">
+          <caret line="13" column="22" selection-start-line="13" selection-start-column="22" selection-end-line="13" selection-end-column="22" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../siseme-ui/src/App.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="14" column="56" selection-start-line="14" selection-start-column="56" selection-end-line="14" selection-end-column="56" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../siseme-ui/src/components/deals/search/region/RegionTable.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="26" column="28" lean-forward="true" selection-start-line="26" selection-start-column="28" selection-end-line="26" selection-end-column="28" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../siseme-ui/src/components/deals/search/DealsSearchContainer.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="376">
+          <caret line="26" column="5" lean-forward="true" selection-start-line="26" selection-start-column="5" selection-end-line="26" selection-end-column="5" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../siseme-ui/src/components/deals/search/region/RegionBar.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="303">
+          <caret line="37" column="4" lean-forward="true" selection-start-line="37" selection-start-column="4" selection-end-line="42" selection-end-column="6" />
+          <folding>
+            <element signature="e#0#39#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../siseme-ui/src/components/deals/result/DealsTable.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="293">
+          <caret line="14" column="5" lean-forward="true" selection-end-line="21" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../siseme-ui/src/components/deals/result/DealsHeader.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="21">
+          <caret line="1" selection-start-line="1" selection-end-line="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../siseme-ui/src/components/deals/result/DealsHeader.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="167">
+          <caret line="9" column="17" selection-start-line="9" selection-start-column="6" selection-end-line="9" selection-end-column="17" />
+          <folding>
+            <element signature="e#0#39#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../siseme-ui/src/components/deals/result/DealsResultContainer.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="273">
+          <caret line="13" lean-forward="true" selection-start-line="13" selection-end-line="13" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../siseme-ui/src/components/deals/result/DealsTable.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="199">
+          <caret line="28" column="36" lean-forward="true" selection-start-line="28" selection-start-column="36" selection-end-line="28" selection-end-column="36" />
+          <folding>
+            <element signature="e#0#39#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../siseme-ui/src/stores/SearchStore.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="239">
+          <caret line="185" column="28" selection-end-line="257" selection-end-column="1" />
+          <folding>
+            <element signature="e#0#50#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/common/CommonDateBar.js" />
+    <entry file="file://$PROJECT_DIR$/../siseme-ui/src/components/common/CommonSearchBar.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="318">
+          <caret line="20" column="22" selection-start-line="20" selection-start-column="22" selection-end-line="20" selection-end-column="22" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../siseme-ui/src/components/common/CommonSearchBar.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="147">
+          <caret line="7" column="1" lean-forward="true" selection-start-line="7" selection-start-column="1" selection-end-line="7" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../siseme-ui/src/components/common/CommonSubTabs.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="42">
+          <caret line="6" column="9" selection-start-line="6" selection-start-column="9" selection-end-line="6" selection-end-column="9" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../siseme-ui/src/components/common/CommonSubTabs.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="15" column="3" lean-forward="true" selection-start-line="15" selection-start-column="3" selection-end-line="15" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../siseme-ui/src/components/common/CommonTabs.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="42">
+          <caret line="6" column="9" selection-start-line="6" selection-start-column="9" selection-end-line="6" selection-end-column="9" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../siseme-ui/src/components/common/CommonTabs.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="12" selection-start-column="12" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../siseme-ui/src/api/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="230">
+          <caret line="27" column="35" lean-forward="true" selection-start-line="27" selection-start-column="35" selection-end-line="27" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../siseme-ui/package.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="368">
+          <caret line="48" lean-forward="true" selection-start-line="48" selection-end-line="48" />
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>

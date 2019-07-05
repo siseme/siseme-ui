@@ -1,0 +1,22 @@
+.deals-list {
+  .search {
+    display: flex;
+    flex-direction: column;
+    .row {
+      display: flex;
+    }
+  }
+
+  .header {
+    border: 1px solid #e8e8e8;
+    border-radius: 4px;
+    .ant-page-header-title-view-extra {
+      margin-top: 2px;
+    }
+    .footer {
+      margin-top: -10px;
+      margin-left: 8px;
+      margin-bottom: 10px;
+    }
+  }
+}

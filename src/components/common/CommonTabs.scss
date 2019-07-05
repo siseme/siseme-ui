@@ -1,0 +1,17 @@
+.common-tabs {
+  .row {
+    a {
+      width: 100%;
+
+      button {
+        width: 100%;
+      }
+    }
+  }
+
+  .selected {
+    button {
+      background-color: yellow;
+    }
+  }
+}
