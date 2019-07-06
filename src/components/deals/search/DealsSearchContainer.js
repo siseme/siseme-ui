@@ -17,7 +17,7 @@ const tabs = [
         name: '최근검색',
     },
     {
-        path: '/search/region/sido',
+        path: '/search/region',
         name: '지역검색',
     },
     {

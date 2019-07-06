@@ -37,7 +37,7 @@ export default class SearchStore {
 
     constructor(root) {
         this.root = root;
-        this.getSidoList();
+        this.load();
     }
 
     @computed
@@ -194,6 +194,7 @@ export default class SearchStore {
     @asyncAction
     async* getDealsList() {
         if (this.getRegion !== null) {
+            this.save();
             this.pageNo = 0;
             this.dealsList = [];
             let region = this.getRegion;
@@ -248,6 +249,21 @@ export default class SearchStore {
         this.aptList = yield api.getAptList(this.dong.code).then(result => result.data);
     };
 
+    @asyncAction
+    async* load() {
+        let params = localStorage.getItem('search.params.last');
+        if (params) {
+            let parseJson = JSON.parse(params);
+            yield this.handleRegion(parseJson.region);
+            this.startDate = new moment(parseJson.startDate);
+            this.endDate = new moment(parseJson.endDate);
+            yield this.getDealsList();
+        }
+        else {
+            this.getSidoList();
+        }
+    };
+
     initDong = () => {
         this.dongList = [];
         this.dong = ALL;
@@ -273,5 +289,21 @@ export default class SearchStore {
         this.dong = ALL;
         this.aptList = [];
         this.apt = ALL;
+    };
+
+    save = () => {
+        let params = {
+            'region': this.getRegion,
+            'startDate': this.startDate,
+            'endDate': this.endDate,
+            'searchDate': new moment()
+        };
+/*        let searchParamsList = localStorage.getItem('search.params.list');
+        if(!searchParamsList) {
+            searchParamsList = [];
+        }
+        searchParamsList.push(JSON.stringify(params));
+        localStorage.setItem('search.params.list', JSON.stringify(searchParamsList));*/
+        localStorage.setItem('search.params.last', JSON.stringify(params));
     };
 }
