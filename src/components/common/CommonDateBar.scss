@@ -1,0 +1,10 @@
+.common-date-bar {
+  display: flex;
+  justify-content: space-between;
+  div {
+    .split {
+      margin-left: 4px;
+      margin-right: 4px;
+    }
+  }
+}

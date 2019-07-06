@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {inject, observer} from 'mobx-react/index';
+import {inject, observer} from 'mobx-react';
 
 import CommonSearchBar from "../../common/CommonSearchBar";
 

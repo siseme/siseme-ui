@@ -6,16 +6,16 @@ const get = (path, params) => {
 
 export const api = {
     getSidoList: () => {
-        return get('/dev/api/v1/regions/type/sido', {});
+        return get('http://15.164.200.252/dev/api/v1/regions/type/sido', {});
     },
     getGunguList: (sidoCode) => {
-        return get('/dev/api/v1/regions/type/gungu/like/' + sidoCode, {});
+        return get('http://15.164.200.252/dev/api/v1/regions/type/gungu/like/' + sidoCode, {});
     },
     getDongList: (gunguCode) => {
-        return get('/dev/api/v1/regions/type/dong/like/' + gunguCode, {});
+        return get('http://15.164.200.252/dev/api/v1/regions/type/dong/like/' + gunguCode, {});
     },
     getAptList: (dongCode) => {
-        return get('/dev/api/v2/search/regions/' + dongCode + '/aptname', {});
+        return get('http://15.164.200.252/dev/api/v2/search/regions/' + dongCode + '/aptname', {});
     },
     getDealsList: (startDate, endDate, type, name, code, pageNo, size, sortType, orderType, areaType, isNewData, tradeType) => {
         let params = {
@@ -32,12 +32,12 @@ export const api = {
             "pageNo": pageNo,
             "size": size
         };
-        return get('/dev/api/v2/trade/', params);
+        return get('http://15.164.200.252/dev/api/v2/trade/', params);
     },
     query: (keyword) => {
         let params = {
             "keyword": keyword
         };
-        return get('/dev/api/v2/search/regions/', params);
+        return get('http://15.164.200.252/dev/api/v2/search/regions/', params);
     },
 };

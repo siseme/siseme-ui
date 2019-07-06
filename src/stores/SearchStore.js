@@ -95,6 +95,22 @@ export default class SearchStore {
     };
 
     @action
+    handleRangeDate = (range) => {
+        this.endDate = new moment();
+        this.startDate = new moment().subtract(range, 'years');
+    };
+
+    @action
+    handleStartDate = (date) => {
+        this.startDate = new moment(date);
+    };
+
+    @action
+    handleEndDate = (date) => {
+        this.endDate = new moment(date);
+    };
+
+    @action
     handleSort = (sort) => {
         this.sortType = sort;
     };

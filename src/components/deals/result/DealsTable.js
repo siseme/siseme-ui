@@ -68,9 +68,7 @@ class DealsTable extends Component {
                             width="20%"
                             render={(date, record) => (
                                 <span>
-                                {date.substring(2, 4)}.{date.substring(4, 6)}
-                                    <br/>
-                                    {record.dateName}
+                                {date.substring(2, 4)}.{this.getMonthName(date.substring(4, 6))}.{record.dateName}
                             </span>
                             )}
                         />
@@ -161,6 +159,10 @@ class DealsTable extends Component {
         const {searchStore} = this.props;
         searchStore.handleSort(sort);
         searchStore.getDealsList();
+    };
+
+    getMonthName = (value) => {
+        return value.startsWith('0') ? value.substring(1, 2) : value;
     };
 }
 
