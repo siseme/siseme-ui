@@ -98,16 +98,19 @@ export default class SearchStore {
     handleRangeDate = (range) => {
         this.endDate = new moment();
         this.startDate = new moment().subtract(range, 'years');
+        this.getDealsList();
     };
 
     @action
     handleStartDate = (date) => {
         this.startDate = new moment(date);
+        this.getDealsList();
     };
 
     @action
     handleEndDate = (date) => {
         this.endDate = new moment(date);
+        this.getDealsList();
     };
 
     @action
