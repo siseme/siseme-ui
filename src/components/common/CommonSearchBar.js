@@ -17,7 +17,6 @@ function CommonSearchBar(props) {
                 <Input.Search
                     onClick={props.handleInput}
                     allowClear
-                    ref={(input) => input && input.focus()}
                     size="large"
                     placeholder={props.placeholder}
                     value={props.value}
