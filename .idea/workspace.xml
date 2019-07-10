@@ -2,16 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ab4c054b-59f6-4fda-92eb-f68f548fad0a" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/components/deals/result/DealsRankingTable.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/deals/result/DealsRankingTable.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/api/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/api/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/common/CommonDateBar.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/common/CommonDateBar.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/common/CommonDateBar.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/common/CommonDateBar.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/deals/result/DealsResultContainer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/deals/result/DealsResultContainer.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/deals/result/DealsTable.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/deals/result/DealsTable.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/deals/result/DealsTable.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/deals/result/DealsTable.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/stores/SearchStore.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/stores/SearchStore.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -25,10 +18,10 @@
   <component name="FileEditorManager">
     <leaf>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/components/deals/result/DealsRankingTable.js">
+        <entry file="file://$PROJECT_DIR$/src/components/common/CommonDateBar.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="311">
-              <caret line="103" column="72" selection-start-line="103" selection-start-column="72" selection-end-line="103" selection-end-column="72" />
+            <state relative-caret-position="390">
+              <caret line="45" selection-start-line="45" selection-end-line="45" />
               <folding>
                 <element signature="e#0#39#0" expanded="true" />
               </folding>
@@ -40,8 +33,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>검색</find>
-      <find>검색결과</find>
       <find>handleRegion</find>
       <find>신규건</find>
       <find>maxPriceFilter</find>
@@ -70,6 +61,8 @@
       <find>getCount</find>
       <find>거래량</find>
       <find>num</find>
+      <find>com</find>
+      <find>endDateOpen</find>
     </findStrings>
     <replaceStrings>
       <replace>.departure</replace>
@@ -144,7 +137,6 @@
         <option value="$PROJECT_DIR$/src/components/deals/result/DealsHeader.scss" />
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/package.json" />
-        <option value="$PROJECT_DIR$/src/components/common/CommonDatePicker.js" />
         <option value="$PROJECT_DIR$/src/App.js" />
         <option value="$PROJECT_DIR$/src/components/common/CommonSubTabs.js" />
         <option value="$PROJECT_DIR$/src/components/deals/search/history/SearchHistoryTable.scss" />
@@ -163,15 +155,16 @@
         <option value="$PROJECT_DIR$/src/components/common/CommonTabs.scss" />
         <option value="$PROJECT_DIR$/src/components/deals/search/query/QueryBar.scss" />
         <option value="$PROJECT_DIR$/src/components/deals/search/query/QueryBar.js" />
-        <option value="$PROJECT_DIR$/src/components/common/CommonDateBar.js" />
         <option value="$PROJECT_DIR$/src/components/deals/result/DealsResultContainer.js" />
         <option value="$PROJECT_DIR$/src/components/common/CommonDateBar.scss" />
-        <option value="$PROJECT_DIR$/src/components/deals/result/DealsTable.scss" />
-        <option value="$PROJECT_DIR$/src/components/deals/result/DealsTable.js" />
         <option value="$PROJECT_DIR$/src/api/index.js" />
         <option value="$PROJECT_DIR$/src/stores/SearchStore.js" />
         <option value="$PROJECT_DIR$/src/components/deals/result/DealsRankingTable.scss" />
         <option value="$PROJECT_DIR$/src/components/deals/result/DealsRankingTable.js" />
+        <option value="$PROJECT_DIR$/src/components/deals/result/DealsTable.js" />
+        <option value="$PROJECT_DIR$/src/components/deals/result/DealsTable.scss" />
+        <option value="$PROJECT_DIR$/src/components/common/CommonDatePicker.js" />
+        <option value="$PROJECT_DIR$/src/components/common/CommonDateBar.js" />
       </list>
     </option>
   </component>
@@ -350,12 +343,12 @@
       <workItem from="1561732326101" duration="32126000" />
       <workItem from="1561821928028" duration="17737000" />
       <workItem from="1562301323431" duration="61000" />
-      <workItem from="1562758157691" duration="8799000" />
+      <workItem from="1562758157691" duration="9524000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="222995000" />
+    <option name="totallyTimeSpent" value="223720000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1440" height="877" extended-state="6" />
@@ -366,7 +359,7 @@
       <window_info id="npm" order="2" sideWeight="0.24371374" side_tool="true" weight="0.1987315" />
       <window_info id="Favorites" order="3" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.32769832" />
+      <window_info anchor="bottom" id="Find" order="1" visible="true" weight="0.32769832" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.32769832" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.30949286" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
@@ -376,7 +369,7 @@
       <window_info anchor="bottom" id="Version Control" order="8" weight="0.32899868" />
       <window_info anchor="bottom" id="TypeScript" order="9" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
-      <window_info anchor="bottom" id="Terminal" order="11" visible="true" weight="0.32769832" />
+      <window_info anchor="bottom" id="Terminal" order="11" weight="0.32769832" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -482,20 +475,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="132">
           <caret line="7" column="2" lean-forward="true" selection-start-line="7" selection-start-column="2" selection-end-line="7" selection-end-column="2" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/package.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="277">
-          <caret line="17" column="33" lean-forward="true" selection-start-line="17" selection-start-column="33" selection-end-line="17" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/common/CommonDatePicker.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="327">
-          <caret line="72" column="1" lean-forward="true" selection-start-line="72" selection-start-column="1" selection-end-line="72" selection-end-column="1" />
         </state>
       </provider>
     </entry>
@@ -629,16 +608,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/common/CommonDateBar.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="191">
-          <caret line="55" column="99" selection-start-line="55" selection-start-column="91" selection-end-line="55" selection-end-column="99" />
-          <folding>
-            <element signature="e#0#39#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/components/deals/search/query/QueryBar.scss">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-131">
@@ -699,13 +668,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/deals/result/DealsTable.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="257">
-          <caret line="23" column="23" lean-forward="true" selection-start-line="23" selection-start-column="23" selection-end-line="23" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/components/common/CommonDateBar.scss">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="336">
@@ -734,20 +696,54 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/deals/result/DealsTable.js">
+    <entry file="file://$PROJECT_DIR$/src/components/deals/result/DealsRankingTable.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="206">
-          <caret line="148" column="6" lean-forward="true" selection-start-line="146" selection-start-column="4" selection-end-line="148" selection-end-column="6" />
+        <state relative-caret-position="517">
+          <caret line="105" column="50" lean-forward="true" selection-start-line="105" selection-start-column="50" selection-end-line="105" selection-end-column="50" />
           <folding>
             <element signature="e#0#39#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/deals/result/DealsRankingTable.js">
+    <entry file="file://$PROJECT_DIR$/src/components/deals/result/DealsTable.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="311">
-          <caret line="103" column="72" selection-start-line="103" selection-start-column="72" selection-end-line="103" selection-end-column="72" />
+        <state relative-caret-position="170">
+          <caret line="57" column="57" selection-start-line="57" selection-start-column="57" selection-end-line="57" selection-end-column="57" />
+          <folding>
+            <element signature="e#0#39#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/deals/result/DealsTable.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="362">
+          <caret line="29" column="22" selection-start-line="29" selection-start-column="22" selection-end-line="29" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/package.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="20" column="4" lean-forward="true" selection-start-line="20" selection-start-column="4" selection-end-line="20" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/common/CommonDatePicker.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="109">
+          <caret line="34" column="5" selection-start-line="34" selection-start-column="5" selection-end-line="34" selection-end-column="5" />
+          <folding>
+            <element signature="e#0#39#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/common/CommonDateBar.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="390">
+          <caret line="45" selection-start-line="45" selection-end-line="45" />
           <folding>
             <element signature="e#0#39#0" expanded="true" />
           </folding>

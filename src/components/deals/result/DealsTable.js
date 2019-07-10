@@ -39,97 +39,93 @@ class DealsTable extends Component {
                                                  onClick={() => this.handleSort('mainPrice')}>가격순</Typography.Text>,
                             ]}
                             footer={
-                                <div className="footer">
-                                    <Typography.Text style={{marginRight: 12}}
-                                                     className={!this.state.maxPriceFilter && !this.state.newItemFilter ? 'selected' : ''}
-                                                     onClick={() => this.handleNoneFilter(true)}>전체
-                                        ({searchStore.dealsList.totalElements ? searchStore.dealsList.totalElements : 0}건)
-                                    </Typography.Text>
-                                    <Typography.Text style={{marginRight: 12}}
-                                                     className={this.state.maxPriceFilter ? 'selected' : ''}
-                                                     onClick={() => this.handleMaxPriceFilter(true)}>신고가
-                                        ({searchStore.resultCount ? searchStore.resultCount.maxPriceCount : 0}건)</Typography.Text>
-                                    <Typography.Text className={this.state.newItemFilter ? 'selected' : ''}
-                                                     onClick={() => this.handleNewItem(true)}>신규
-                                        ({searchStore.resultCount ? searchStore.resultCount.newItemCount : 0}건)</Typography.Text>
+                                <div>
+                                    <div className="footer">
+                                        <Typography.Text style={{marginRight: 12}}
+                                                         className={!this.state.maxPriceFilter && !this.state.newItemFilter ? 'selected' : ''}
+                                                         onClick={() => this.handleNoneFilter(true)}>전체
+                                            ({searchStore.dealsList.totalElements ? searchStore.dealsList.totalElements : 0}건)
+                                        </Typography.Text>
+                                        <Typography.Text style={{marginRight: 12}}
+                                                         className={this.state.maxPriceFilter ? 'selected' : ''}
+                                                         onClick={() => this.handleMaxPriceFilter(true)}>신고가
+                                            ({searchStore.resultCount ? searchStore.resultCount.maxPriceCount : 0}건)</Typography.Text>
+                                        <Typography.Text className={this.state.newItemFilter ? 'selected' : ''}
+                                                         onClick={() => this.handleNewItem(true)}>신규
+                                            ({searchStore.resultCount ? searchStore.resultCount.newItemCount : 0}건)</Typography.Text>
+                                    </div>
+                                    <InfiniteScroll
+                                        className="table"
+                                        pageStart={searchStore.pageNo}
+                                        loadMore={this.loadMore}
+                                        hasMore={this.hasMore}
+                                    >
+                                        <Table dataSource={this.filter(searchStore.dealsList.contents)}
+                                               size="small"
+                                               pagination={false}>
+                                            <Table.Column
+                                                align="center"
+                                                title="날짜"
+                                                dataIndex="date"
+                                                key="date"
+                                                width="20%"
+                                                render={(date, record) => (
+                                                    <span>{date.substring(0, 4)}
+                                                        <br/>
+                                                        {date.substring(4, 6)}.{this.getDayName(record.dateName)}
+                                                    </span>
+                                                )}
+                                            />
+                                            <Table.Column
+                                                align="center"
+                                                title="지역"
+                                                dataIndex="regionName"
+                                                key="regionName"
+                                                width="20%"
+                                                render={regionName => (
+                                                    <span>{regionName}</span>
+                                                )}
+                                            />
+                                            <Table.Column
+                                                align="center"
+                                                title="단지"
+                                                dataIndex="name"
+                                                key="name"
+                                                width="23%"
+                                                render={name => (
+                                                    <span>{name}</span>
+                                                )}
+                                            />
+                                            <Table.Column
+                                                align="center"
+                                                title="전용m²"
+                                                dataIndex="area"
+                                                key="area"
+                                                width="18%"
+                                                render={area => (
+                                                    <span>{(area * 1).toFixed(2)}</span>
+                                                )}
+                                            />
+                                            <Table.Column
+                                                align="center"
+                                                title="가격"
+                                                dataIndex="price"
+                                                key="price"
+                                                width="19%"
+                                                render={(price, record) => (
+                                                    <span>
+                                                        <Typography.Text type={price > record.pastMaxPrice && 'danger'}
+                                                                         strong={price > record.pastMaxPrice && 'danger'}>{this.numberWithCommas(price)}</Typography.Text>
+                                                        <br/>
+                                                        <Typography.Text
+                                                            type="secondary">({this.numberWithCommas(record.pastMaxPrice)})</Typography.Text>
+                                                    </span>
+                                                )}
+                                            />
+                                        </Table>
+                                    </InfiniteScroll>
                                 </div>
                             }/>
-                <InfiniteScroll
-                    pageStart={searchStore.pageNo}
-                    loadMore={this.loadMore}
-                    hasMore={this.hasMore}
-                >
-                    <Table dataSource={this.filter(searchStore.dealsList.contents)}
-                           size="small"
-                           pagination={false}>
-                        <Table.Column
-                            align="center"
-                            title="날짜"
-                            dataIndex="date"
-                            key="date"
-                            width="20%"
-                            render={(date, record) => (
-                                <span>
-                                {date.substring(0, 4)}
-                                    <br/>
-                                    {date.substring(4, 6)}.{this.getDayName(record.dateName)}
-                            </span>
-                            )}
-                        />
-                        <Table.Column
-                            align="center"
-                            title="지역"
-                            dataIndex="regionName"
-                            key="regionName"
-                            width="20%"
-                            render={regionName => (
-                                <span>
-                        {regionName}
-                        </span>
-                            )}
-                        />
-                        <Table.Column
-                            align="center"
-                            title="단지"
-                            dataIndex="name"
-                            key="name"
-                            width="23%"
-                            render={name => (
-                                <span>
-                        {name}
-                        </span>
-                            )}
-                        />
-                        <Table.Column
-                            align="center"
-                            title="전용m²"
-                            dataIndex="area"
-                            key="area"
-                            width="18%"
-                            render={area => (
-                                <span>
-                        {(area * 1).toFixed(2)}
-                        </span>
-                            )}
-                        />
-                        <Table.Column
-                            align="center"
-                            title="가격"
-                            dataIndex="price"
-                            key="price"
-                            width="19%"
-                            render={(price, record) => (
-                                <span>
-                                <Typography.Text type={price > record.pastMaxPrice && 'danger'}
-                                                 strong={price > record.pastMaxPrice && 'danger'}>{this.numberWithCommas(price)}</Typography.Text>
-                                <br/>
-                                <Typography.Text
-                                    type="secondary">({this.numberWithCommas(record.pastMaxPrice)})</Typography.Text>
-                        </span>
-                            )}
-                        />
-                    </Table>
-                </InfiniteScroll>
             </div>
         )
     }

@@ -21,10 +21,12 @@ class CommonDateBar extends Component {
     };
 
     handleStartDateOpen = () => {
+        this.disableScroll();
         this.setState({startDateOpen: true});
     };
 
     handleStartDateCancel = () => {
+        this.enableScroll();
         this.setState({startDateOpen: false});
     };
 
@@ -35,10 +37,12 @@ class CommonDateBar extends Component {
     };
 
     handleEndDateOpen = () => {
+        this.disableScroll();
         this.setState({endDateOpen: true});
     };
 
     handleEndDateCancel = () => {
+        this.enableScroll();
         this.setState({endDateOpen: false});
     };
 
@@ -46,6 +50,20 @@ class CommonDateBar extends Component {
         const {searchStore} = this.props;
         this.setState({range: range});
         searchStore.handleRangeDate(range);
+    };
+
+    disableScroll = () => {
+        let rootElem = document.getElementById('root');
+        rootElem.style.position = 'fixed';
+        rootElem.style.overflowY = 'scroll';
+        rootElem.style.width = '100%';
+    };
+
+    enableScroll = () => {
+        let rootElem = document.getElementById('root');
+        rootElem.style.position = '';
+        rootElem.style.overflowY = '';
+        rootElem.style.width = '';
     };
 
     render() {
