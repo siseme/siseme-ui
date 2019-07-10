@@ -27,14 +27,14 @@ export const api = {
         };
         return get('http://15.164.200.252/dev/api/v2/trade/count/', params);
     },
-    getTradeRanks: (startDate, endDate, type, code) => {
+    getTradeRanks: (tradeType, startDate, endDate, type, code) => {
         let params = {
             "startDate": startDate,
             "endDate": endDate,
             "searchType": type,
             "regionCode": code
         };
-        return get('http://15.164.200.252/dev/api/v2/trade/ranks/', params);
+        return get('http://15.164.200.252/dev/api/v2/' + tradeType + '/ranks/', params);
     },
     getDealsList: (startDate, endDate, type, name, code, pageNo, size, sortType, orderType, areaType, isNewData, tradeType) => {
         let params = {

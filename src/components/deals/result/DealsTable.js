@@ -121,22 +121,46 @@ class DealsTable extends Component {
                                 <span>{(area * 1).toFixed(2)}</span>
                             )}
                         />
-                        <Table.Column
-                            align="center"
-                            title="가격"
-                            dataIndex="price"
-                            key="price"
-                            width="19%"
-                            render={(price, record) => (
-                                <span>
+                        {
+                            searchStore.tradeType === 'rent' ?
+                                <Table.Column
+                                    align="center"
+                                    title="가격"
+                                    dataIndex="price"
+                                    key="price"
+                                    width="19%"
+                                    render={(price, record) => (
+                                        <span>
+                                                        <Typography.Text>{this.numberWithCommas(price)}</Typography.Text>
+                                            {
+                                                record.subPrice > 0 &&
+                                                <Typography.Text><br/>/{this.numberWithCommas(record.subPrice)}</Typography.Text>
+                                            }
+                                                        <br/>
+                                            {
+                                                !record.subPrice > 0 &&
+                                                    <Typography.Text>전세</Typography.Text>
+                                            }
+                                                    </span>
+                                    )}
+                                /> :
+                                <Table.Column
+                                    align="center"
+                                    title="가격"
+                                    dataIndex="price"
+                                    key="price"
+                                    width="19%"
+                                    render={(price, record) => (
+                                        <span>
                                                         <Typography.Text type={price > record.pastMaxPrice && 'danger'}
                                                                          strong={price > record.pastMaxPrice && 'danger'}>{this.numberWithCommas(price)}</Typography.Text>
                                                         <br/>
                                                         <Typography.Text
                                                             type="secondary">({this.numberWithCommas(record.pastMaxPrice)})</Typography.Text>
                                                     </span>
-                            )}
-                        />
+                                    )}
+                                />
+                        }
                     </Table>
                 </InfiniteScroll>
             </div>

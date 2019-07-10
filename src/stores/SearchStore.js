@@ -102,6 +102,12 @@ export default class SearchStore {
     };
 
     @action
+    handleTradeType = (tradeType) => {
+        this.tradeType = tradeType;
+        this.getDealsList();
+    };
+
+    @action
     handleRangeDate = (range) => {
         this.endDate = new moment();
         this.startDate = new moment().subtract(range, 'months');
@@ -211,6 +217,7 @@ export default class SearchStore {
             };
             let region = this.getRegion;
             let result = yield api.getTradeRanks(
+                this.tradeType,
                 this.startDate.format('YYYYMM'),
                 this.endDate.format('YYYYMM'),
                 region.type,

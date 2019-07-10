@@ -1,0 +1,22 @@
+.deals-tabs {
+  height: 45px;
+  margin-top: 4px;
+  .row {
+    height: 100%;
+    a {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      height: 100%;
+      width: 100%;
+
+      font-size: 1rem;
+    }
+
+    .selected {
+      font-weight: 800;
+      border-bottom: 2px solid #595959;
+    }
+  }
+}
