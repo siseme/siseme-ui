@@ -4,7 +4,10 @@
   align-items: center;
   padding: 10px 26px;
   background-color: #f4f4f4;
-  border-bottom: 10px solid #e8e8e8;
+  border-left: 1px solid #e8e8e8;
+  border-right: 1px solid #e8e8e8;
+  border-bottom: 1px solid #e8e8e8;
+
 
   .date-select {
     .selected {
