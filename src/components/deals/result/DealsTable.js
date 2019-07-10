@@ -1,10 +1,9 @@
 import React, {Component} from 'react';
 import {inject, observer} from 'mobx-react/index';
-import {Button, Input, PageHeader, Spin, Table, Typography} from "antd";
+import {PageHeader, Spin, Table, Typography} from "antd";
 import InfiniteScroll from 'react-infinite-scroller';
 
 import "./DealsTable.scss";
-import CommonSearchBar from "../../common/CommonSearchBar";
 
 @inject('searchStore')
 @observer
@@ -29,14 +28,14 @@ class DealsTable extends Component {
                 <PageHeader className="header"
                             title="거래 내역"
                             extra={[
-                                <Typography.Text className={searchStore.sortType === 'date' ? 'selected' : ''}
+                                <Typography.Text key={0} className={searchStore.sortType === 'date' ? 'selected' : ''}
                                                  onClick={() => this.handleSort('date')}>최신순</Typography.Text>,
-                                <Typography.Text type="secondary">|</Typography.Text>,
+                                <Typography.Text key={1} type="secondary">|</Typography.Text>,
                                 /*
                                                                 <Typography.Text type="secondary" onClick={() => this.handleSort('area')}>면적순</Typography.Text>,
                                                                 <Typography.Text type="secondary">|</Typography.Text>,
                                 */
-                                <Typography.Text className={searchStore.sortType === 'mainPrice' ? 'selected' : ''}
+                                <Typography.Text key={2} className={searchStore.sortType === 'mainPrice' ? 'selected' : ''}
                                                  onClick={() => this.handleSort('mainPrice')}>가격순</Typography.Text>,
                             ]}
                             footer={
@@ -72,7 +71,7 @@ class DealsTable extends Component {
                 <InfiniteScroll
                     pageStart={searchStore.pageNo}
                     loadMore={this.loadMore}
-                    hasMore={this.hasMore}
+                    hasMore={searchStore.hasMore}
                 >
                     <Table className="table"
                            dataSource={this.filter(searchStore.dealsList.contents)}
@@ -171,11 +170,6 @@ class DealsTable extends Component {
     loadMore = () => {
         const {searchStore} = this.props;
         searchStore.appendDealsList();
-    };
-
-    hasMore = () => {
-        const {searchStore} = this.props;
-        searchStore.hasMore();
     };
 
     numberWithCommas = (x) => {

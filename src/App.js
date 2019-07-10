@@ -1,6 +1,4 @@
 import React from 'react';
-
-import SearchContainer from "./components/search/SearchContainer";
 import DealsResultContainer from "./components/deals/result/DealsResultContainer";
 import DealsSearchContainer from "./components/deals/search/DealsSearchContainer";
 

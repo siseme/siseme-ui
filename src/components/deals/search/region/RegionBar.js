@@ -9,7 +9,6 @@ import './RegionBar.scss';
 class RegionBar extends Component {
     render() {
         const {searchStore} = this.props;
-        const {history} = this.props;
         return (
             <React.Fragment>
                 <CommonSearchBar icon="arrow-left"

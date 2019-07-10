@@ -1,13 +1,11 @@
 import React from 'react';
-import {Route, Switch} from "react-router-dom";
+import {Route} from "react-router-dom";
 
 import CommonTabs from "../../common/CommonTabs";
 import SidoTable from "./region/data/SidoTable";
 import GunguTable from "./region/data/GunguTable";
 import DongTable from "./region/data/DongTable";
-import AptTable from "./region/data/AptTable";
 import RegionBar from "./region/RegionBar";
-import CommonSubTabs from "../../common/CommonSubTabs";
 import QueryBar from "./query/QueryBar";
 import QueryTable from "./query/QueryTable";
 import SearchHistoryTable from "./history/SearchHistoryTable";

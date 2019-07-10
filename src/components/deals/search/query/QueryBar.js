@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import {inject, observer} from 'mobx-react/index';
-import {Button, Input, List, Typography} from 'antd';
+import {Button, Input} from 'antd';
 
 import './QueryBar.scss'
 
@@ -9,7 +9,6 @@ import './QueryBar.scss'
 class QueryBar extends Component {
     render() {
         const {searchStore} = this.props;
-        const {history} = this.props;
         return (
             <div className="query-input">
                 <div className="row">

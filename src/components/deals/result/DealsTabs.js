@@ -1,6 +1,5 @@
 import React, {Component} from 'react';
-import {NavLink} from "react-router-dom";
-import {Button, Col, Row, Typography} from "antd";
+import {Col, Row, Typography} from "antd";
 
 import "./DealsTabs.scss";
 import {inject, observer} from "mobx-react";
@@ -13,8 +12,8 @@ class DealsTabs extends Component {
         return (
             <Row className="deals-tabs">
                 {
-                    this.props.itemList.map(x => (
-                        <Col className="row" span={(24 / this.props.itemList.length)}>
+                    this.props.itemList.map((x, idx) => (
+                        <Col key={idx} className="row" span={(24 / this.props.itemList.length)}>
                             <a className={searchStore.tradeType === x.type ? 'selected' : ''} href="javascript:void(0)"
                                onClick={() => this.handleTradeType(x.type)}>
                                 <Typography.Text>{x.name}</Typography.Text>

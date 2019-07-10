@@ -72,6 +72,8 @@ export default class SearchStore {
             return this.sido.name + ' ' + this.gungu.name;
         } else if (this.sido.code !== ALL.code) {
             return this.sido.name;
+        } else {
+            return null;
         }
     };
 
@@ -83,6 +85,9 @@ export default class SearchStore {
             return this.sido.name + ' ' + this.gungu.name;
         } else if (this.sido.code !== ALL.code) {
             return this.sido.name;
+        }
+        else {
+            return null;
         }
     };
 

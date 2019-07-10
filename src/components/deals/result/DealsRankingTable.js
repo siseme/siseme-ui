@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import {inject, observer} from 'mobx-react/index';
-import {Button, Input, PageHeader, List, Typography, Table, Spin} from "antd";
+import {PageHeader, Spin, Table, Typography} from "antd";
 
 import "./DealsRankingTable.scss";
 

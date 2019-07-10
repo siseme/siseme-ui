@@ -34,7 +34,6 @@ class DealsHeader extends Component {
 
     handleSearch = () => {
         const {searchStore} = this.props;
-        const {history} = this.props;
         searchStore.getDealsList();
     };
 }

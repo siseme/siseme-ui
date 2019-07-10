@@ -4,7 +4,6 @@ import DealsTable from "./DealsTable";
 import DealsHeader from "./DealsHeader";
 import CommonDateBar from "../../common/CommonDateBar";
 import DealsRankingTable from "./DealsRankingTable";
-import CommonTabs from "../../common/CommonTabs";
 import DealsTabs from "./DealsTabs";
 
 const tabs = [

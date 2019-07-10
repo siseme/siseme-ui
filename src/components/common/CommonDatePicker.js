@@ -30,10 +30,6 @@ const dateConfig = {
 };
 
 class CommonDatePicker extends Component {
-    constructor(props) {
-        super(props);
-    }
-
     handleDate = (e) => {
         this.props.handleDate(e);
         this.props.cancel();

@@ -16,7 +16,7 @@ class DongTable extends Component {
     }
 
     handleDongClick = (region) => {
-        const {searchStore, history} = this.props;
+        const {searchStore} = this.props;
         searchStore.setDong(region);
 /*
         searchStore.getAptList();

@@ -1,6 +1,6 @@
 import React from 'react';
 import {NavLink} from "react-router-dom";
-import {Button, Col, Row, Typography} from "antd";
+import {Col, Row, Typography} from "antd";
 
 import "./CommonTabs.scss";
 
