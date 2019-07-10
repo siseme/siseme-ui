@@ -73,7 +73,7 @@ class DealsRankingTable extends Component {
                             width="20%"
                             render={count => (
                                 <Typography.Text>
-                                    {count}건
+                                    {this.numberWithCommas(count)}건
                                 </Typography.Text>
                             )}
                         />
@@ -88,7 +88,7 @@ class DealsRankingTable extends Component {
                             width="20%"
                             render={newHighPriceCount => (
                                 <Typography.Text>
-                                    {newHighPriceCount}건
+                                    {this.numberWithCommas(newHighPriceCount)}건
                                 </Typography.Text>
                             )}
                         />
