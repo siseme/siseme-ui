@@ -42,18 +42,30 @@ class DealsTable extends Component {
                             footer={
                                 <div>
                                     <div className="footer">
-                                        <Typography.Text style={{marginRight: 12}}
-                                                         className={!this.state.maxPriceFilter && !this.state.newItemFilter ? 'selected' : ''}
-                                                         onClick={() => this.handleNoneFilter(true)}>전체
-                                            ({searchStore.dealsList.totalElements ? searchStore.dealsList.totalElements : 0}건)
-                                        </Typography.Text>
-                                        <Typography.Text style={{marginRight: 12}}
-                                                         className={this.state.maxPriceFilter ? 'selected' : ''}
-                                                         onClick={() => this.handleMaxPriceFilter(true)}>신고가
-                                            ({searchStore.resultCount ? searchStore.resultCount.maxPriceCount : 0}건)</Typography.Text>
-                                        <Typography.Text className={this.state.newItemFilter ? 'selected' : ''}
-                                                         onClick={() => this.handleNewItem(true)}>신규
-                                            ({searchStore.resultCount ? searchStore.resultCount.newItemCount : 0}건)</Typography.Text>
+                                        {
+                                            (searchStore.dealsList.totalElements ? searchStore.dealsList.totalElements : 0) === 0 ?
+                                                <Typography.Text style={{marginRight: 12}} delete>거래없음</Typography.Text> :
+                                                <Typography.Text style={{marginRight: 12}}
+                                                                 className={!this.state.maxPriceFilter && !this.state.newItemFilter ? 'selected' : ''}
+                                                                 onClick={() => this.handleNoneFilter(true)}>전체
+                                                    ({searchStore.dealsList.totalElements ? searchStore.dealsList.totalElements : 0}건)
+                                                </Typography.Text>
+                                        }
+                                        {
+                                            (searchStore.resultCount ? searchStore.resultCount.maxPriceCount : 0) === 0 ?
+                                                <Typography.Text style={{marginRight: 12}} delete>신고가없음</Typography.Text> :
+                                                <Typography.Text style={{marginRight: 12}}
+                                                                 className={this.state.maxPriceFilter ? 'selected' : ''}
+                                                                 onClick={() => this.handleMaxPriceFilter(true)}>신고가
+                                                    ({searchStore.resultCount ? searchStore.resultCount.maxPriceCount : 0}건)</Typography.Text>
+                                        }
+                                        {
+                                            (searchStore.resultCount ? searchStore.resultCount.newItemCount : 0) === 0 ?
+                                                <Typography.Text delete>신규없음</Typography.Text> :
+                                                <Typography.Text className={this.state.newItemFilter ? 'selected' : ''}
+                                                                 onClick={() => this.handleNewItem(true)}>신규
+                                                    ({searchStore.resultCount ? searchStore.resultCount.newItemCount : 0}건)</Typography.Text>
+                                        }
                                     </div>
                                 </div>
                             }/>
