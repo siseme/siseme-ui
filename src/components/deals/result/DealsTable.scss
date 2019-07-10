@@ -1,4 +1,9 @@
 .deals-list {
+
+  .ant-page-header {
+    border-radius: 0 !important;
+  }
+
   .search {
     display: flex;
     flex-direction: column;
@@ -24,11 +29,15 @@
       margin-left: 8px;
       margin-bottom: 10px;
     }
+  }
 
-    .table {
-      table {
-        font-size: 0.7rem;
-      }
+  .table {
+    border-left: 1px solid #e8e8e8;
+    border-right: 1px solid #e8e8e8;
+    border-bottom: 1px solid #e8e8e8;
+
+    .ant-table-small {
+      border: none;
     }
   }
 }
