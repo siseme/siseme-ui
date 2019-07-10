@@ -1,4 +1,6 @@
-.deals-list {
+.deals-ranking-table {
+  padding-bottom: 13px;
+  background-color : #f4f4f4;
   .search {
     display: flex;
     flex-direction: column;
@@ -13,16 +15,19 @@
     .ant-page-header-title-view-extra {
       margin-top: 2px;
     }
-
-    .selected {
-      font-weight: 800;
-      border-bottom: 2px solid #595959;
-    }
-
     .footer {
       margin-top: -10px;
       margin-left: 8px;
       margin-bottom: 10px;
+
+      .selected {
+        font-weight: 800;
+        border-bottom: 2px solid #595959;
+      }
     }
+  }
+
+  .ant-table-wrapper {
+    margin-bottom: 15px;
   }
 }

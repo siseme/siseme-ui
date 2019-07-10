@@ -26,30 +26,30 @@ class DealsTable extends Component {
         return (
             <div className="deals-list">
                 <PageHeader className="header"
-                            title="실거래내역"
+                            title="거래 내역"
                             extra={[
-                                <Typography.Text mark={searchStore.sortType === 'date'}
+                                <Typography.Text className={searchStore.sortType === 'date' ? 'selected' : ''}
                                                  onClick={() => this.handleSort('date')}>최신순</Typography.Text>,
                                 <Typography.Text type="secondary">|</Typography.Text>,
                                 /*
                                                                 <Typography.Text type="secondary" onClick={() => this.handleSort('area')}>면적순</Typography.Text>,
                                                                 <Typography.Text type="secondary">|</Typography.Text>,
                                 */
-                                <Typography.Text mark={searchStore.sortType === 'mainPrice'}
+                                <Typography.Text className={searchStore.sortType === 'mainPrice' ? 'selected' : ''}
                                                  onClick={() => this.handleSort('mainPrice')}>가격순</Typography.Text>,
                             ]}
                             footer={
                                 <div className="footer">
                                     <Typography.Text style={{marginRight: 12}}
-                                                     mark={!this.state.maxPriceFilter && !this.state.newItemFilter}
+                                                     className={!this.state.maxPriceFilter && !this.state.newItemFilter ? 'selected' : ''}
                                                      onClick={() => this.handleNoneFilter(true)}>전체
                                         ({searchStore.dealsList.totalElements ? searchStore.dealsList.totalElements : 0}건)
                                     </Typography.Text>
                                     <Typography.Text style={{marginRight: 12}}
-                                                     mark={this.state.maxPriceFilter}
+                                                     className={this.state.maxPriceFilter ? 'selected' : ''}
                                                      onClick={() => this.handleMaxPriceFilter(true)}>신고가
                                         ({searchStore.resultCount ? searchStore.resultCount.maxPriceCount : 0}건)</Typography.Text>
-                                    <Typography.Text mark={this.state.newItemFilter}
+                                    <Typography.Text className={this.state.newItemFilter ? 'selected' : ''}
                                                      onClick={() => this.handleNewItem(true)}>신규
                                         ({searchStore.resultCount ? searchStore.resultCount.newItemCount : 0}건)</Typography.Text>
                                 </div>

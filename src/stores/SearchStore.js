@@ -31,6 +31,7 @@ export default class SearchStore {
         newItemCount: 0,
         maxPriceCount: 0
     };
+    @observable rankResult = [];
     @observable pageNo = 0;
     @observable size = 100;
     @observable sortType = 'date';
@@ -199,6 +200,25 @@ export default class SearchStore {
     };
 
     @asyncAction
+    async* getTradeRanks() {
+        if (this.getRegion !== null) {
+            this.resultCount = {
+                newItemCount: 0,
+                maxPriceCount: 0
+            };
+            let region = this.getRegion;
+            let result = yield api.getTradeRanks(
+                this.startDate.format('YYYYMM'),
+                this.endDate.format('YYYYMM'),
+                region.type,
+                region.code)
+                .then(result => result.data);
+            console.log(result);
+            this.rankResult = result;
+        }
+    };
+
+    @asyncAction
     async* getCount() {
         if (this.getRegion !== null) {
             this.resultCount = {
@@ -221,6 +241,7 @@ export default class SearchStore {
     async* getDealsList() {
         if (this.getRegion !== null) {
             this.getCount();
+            this.getTradeRanks();
             this.save();
             this.pageNo = 0;
             this.dealsList = [];

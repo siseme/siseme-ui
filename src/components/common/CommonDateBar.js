@@ -53,11 +53,11 @@ class CommonDateBar extends Component {
         return (
             <div className="common-date-bar">
                 <div className="date-select">
-                    <Typography.Text type="secondary" mark={this.state.range === 1}
+                    <Typography.Text type="secondary" className={this.state.range === 1 ? 'selected' : ''}
                                      onClick={() => this.handleRangeDate(1)}>1개월</Typography.Text>
-                    <Typography.Text type="secondary" mark={this.state.range === 3}
+                    <Typography.Text type="secondary" className={this.state.range === 3 ? 'selected' : ''}
                                      onClick={() => this.handleRangeDate(3)}>3개월</Typography.Text>
-                    <Typography.Text type="secondary" mark={this.state.range === 6}
+                    <Typography.Text type="secondary" className={this.state.range === 6 ? 'selected' : ''}
                                      onClick={() => this.handleRangeDate(6)}>6개월</Typography.Text>
                 </div>
                 <div>
