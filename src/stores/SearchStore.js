@@ -51,7 +51,7 @@ export default class SearchStore {
         } else if (this.sido.code !== -1) {
             return this.sido;
         } else {
-            return null;
+            return ALL;
         }
     };
 
@@ -97,7 +97,7 @@ export default class SearchStore {
     @action
     handleRangeDate = (range) => {
         this.endDate = new moment();
-        this.startDate = new moment().subtract(range, 'years');
+        this.startDate = new moment().subtract(range, 'months');
         this.getDealsList();
     };
 
@@ -150,6 +150,9 @@ export default class SearchStore {
 
     @asyncAction
     async* handleRegion(region) {
+        if (!region || region.code === -1) {
+            return;
+        }
         yield this.getSidoList();
         let sido = this.sidoList.filter(x => x.code === region.code.substring(0, 2))[0];
         this.sido = sido ? sido : ALL;
@@ -251,15 +254,14 @@ export default class SearchStore {
 
     @asyncAction
     async* load() {
-        let params = localStorage.getItem('search.params.last');
-        if (params) {
-            let parseJson = JSON.parse(params);
+        let params = localStorage.getItem('search.params.list');
+        if (params && params.length > 0) {
+            let parseJson = JSON.parse(params)[0];
             yield this.handleRegion(parseJson.region);
             this.startDate = new moment(parseJson.startDate);
             this.endDate = new moment(parseJson.endDate);
             yield this.getDealsList();
-        }
-        else {
+        } else {
             this.getSidoList();
         }
     };
@@ -298,12 +300,30 @@ export default class SearchStore {
             'endDate': this.endDate,
             'searchDate': new moment()
         };
-/*        let searchParamsList = localStorage.getItem('search.params.list');
-        if(!searchParamsList) {
+        let searchParamsList = localStorage.getItem('search.params.list');
+        if (!searchParamsList) {
             searchParamsList = [];
+        } else {
+            searchParamsList = JSON.parse(searchParamsList);
         }
-        searchParamsList.push(JSON.stringify(params));
-        localStorage.setItem('search.params.list', JSON.stringify(searchParamsList));*/
-        localStorage.setItem('search.params.last', JSON.stringify(params));
+        searchParamsList.push(params);
+        searchParamsList = searchParamsList.sort(function (a, b) {
+            let keyA = new Date(a.searchDate),
+                keyB = new Date(b.searchDate);
+            // Compare the 2 dates
+            if (keyA > keyB) return -1;
+            if (keyA < keyB) return 1;
+            return 0;
+        });
+        searchParamsList = this.getUniqueObjectArray(searchParamsList);
+        localStorage.setItem('search.params.list', JSON.stringify(searchParamsList));
     };
+
+    getUniqueObjectArray = (array, key) => {
+        return array.filter((item, i) => {
+            return array.findIndex((item2, j) => {
+                return item.region.code === item2.region.code;
+            }) === i;
+        });
+    }
 }

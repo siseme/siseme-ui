@@ -38,7 +38,7 @@ class QueryBar extends Component {
 
     back = () => {
         const {history} = this.props;
-        history.goBack();
+        history.push('/search/region/sido');
     };
 }
 

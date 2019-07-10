@@ -11,8 +11,14 @@ import {Button, Typography} from "antd";
 class CommonDateBar extends Component {
     constructor(props) {
         super(props);
-        this.state = {startDateOpen: false, endDateOpen: false};
+        this.state = {startDateOpen: false, endDateOpen: false, range: 1};
     }
+
+    handleStartDate = (value) => {
+        const {searchStore} = this.props;
+        this.handleRangeDate(0);
+        searchStore.handleStartDate(value);
+    };
 
     handleStartDateOpen = () => {
         this.setState({startDateOpen: true});
@@ -20,6 +26,12 @@ class CommonDateBar extends Component {
 
     handleStartDateCancel = () => {
         this.setState({startDateOpen: false});
+    };
+
+    handleEndDate = (value) => {
+        const {searchStore} = this.props;
+        this.handleRangeDate(0);
+        searchStore.handleEndDate(value);
     };
 
     handleEndDateOpen = () => {
@@ -30,23 +42,33 @@ class CommonDateBar extends Component {
         this.setState({endDateOpen: false});
     };
 
+    handleRangeDate = (range) => {
+        const {searchStore} = this.props;
+        this.setState({range: range});
+        searchStore.handleRangeDate(range);
+    };
+
     render() {
         const {searchStore} = this.props;
         return (
             <div className="common-date-bar">
-                <div>
-                    <Button onClick={() => searchStore.handleRangeDate(1)}>1년</Button>
-                    <Button onClick={() => searchStore.handleRangeDate(3)}>3년</Button>
-                    <Button onClick={() => searchStore.handleRangeDate(5)}>5년</Button>
+                <div className="date-select">
+                    <Typography.Text type="secondary" mark={this.state.range === 1}
+                                     onClick={() => this.handleRangeDate(1)}>1개월</Typography.Text>
+                    <Typography.Text type="secondary" mark={this.state.range === 3}
+                                     onClick={() => this.handleRangeDate(3)}>3개월</Typography.Text>
+                    <Typography.Text type="secondary" mark={this.state.range === 6}
+                                     onClick={() => this.handleRangeDate(6)}>6개월</Typography.Text>
                 </div>
                 <div>
-                    <Button onClick={this.handleStartDateOpen}>{searchStore.startDate.format('YYYY.MM')}</Button>
-                    <Typography.Text className="split">-</Typography.Text>
-                    <Button onClick={this.handleEndDateOpen}>{searchStore.endDate.format('YYYY.MM')}</Button>
+                    <Button.Group size="large">
+                        <Button onClick={this.handleStartDateOpen}>{searchStore.startDate.format('YYYY.MM')}</Button>
+                        <Button onClick={this.handleEndDateOpen}>{searchStore.endDate.format('YYYY.MM')}</Button>
+                    </Button.Group>
                     <CommonDatePicker value={searchStore.startDate.toDate()}
                                       cancel={this.handleStartDateCancel}
                                       isOpen={this.state.startDateOpen}
-                                      handleDate={searchStore.handleStartDate}/>
+                                      handleDate={this.handleStartDate}/>
                     <CommonDatePicker value={searchStore.endDate.toDate()}
                                       cancel={this.handleEndDateCancel}
                                       isOpen={this.state.endDateOpen}

@@ -18,10 +18,12 @@ class DongTable extends Component {
     handleDongClick = (region) => {
         const {searchStore, history} = this.props;
         searchStore.setDong(region);
+/*
         searchStore.getAptList();
         if (region.code !== -1) {
             history.push('/search/region/apt');
         }
+*/
     };
 }
 

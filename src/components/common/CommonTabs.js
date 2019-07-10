@@ -9,7 +9,7 @@ function CommonTabs(props) {
         <Row className="common-tabs">
             {
                 props.itemList.map(x => (
-                    <Col className="row" span={6}>
+                    <Col className="row" span={(24/props.itemList.length)}>
                         <NavLink exact to={x.path} activeClassName="selected">
                             <Button>{x.name}</Button>
                         </NavLink>

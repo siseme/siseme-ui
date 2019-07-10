@@ -10,24 +10,29 @@ import RegionBar from "./region/RegionBar";
 import CommonSubTabs from "../../common/CommonSubTabs";
 import QueryBar from "./query/QueryBar";
 import QueryTable from "./query/QueryTable";
+import SearchHistoryTable from "./history/SearchHistoryTable";
 
 const tabs = [
     {
-        path: '/search/history',
-        name: '최근검색',
+        path: '/query',
+        name: '검색결과',
     },
     {
-        path: '/search/region',
-        name: '지역검색',
+        path: '/query/history',
+        name: '검색기록',
     },
+/*
     {
         path: '/search/best',
         name: '인기검색',
     },
+*/
+/*
     {
         path: '/search/bookmark',
         name: '북마크',
     },
+*/
 ];
 
 const subTabs = [
@@ -43,24 +48,30 @@ const subTabs = [
         path: '/search/region/dong',
         name: '동',
     },
-    {
+/*    {
         path: '/search/region/apt',
         name: '아파트',
-    },
+    },*/
 ];
 
 function DealsSearchContainer(props) {
     return (
         <React.Fragment>
             <Route path="/query" component={QueryBar}/>
-            <Route path="/query" component={QueryTable}/>
+            <Route path="/query" component={(e) => <CommonTabs itemList={tabs} location={e.location}/>}/>
+            <Route path="/query" exact component={QueryTable}/>
+            <Route path="/query/history" component={SearchHistoryTable}/>
             <Route path="/search" component={RegionBar}/>
-            <Route path="/search" component={() => <CommonTabs itemList={tabs}/>}/>
-            <Route path="/search/region" component={() => <CommonSubTabs itemList={subTabs}/>}/>
+{/*
+            <Route path="/search" component={(e) => <CommonTabs itemList={tabs} location={e.location}/>}/>
+*/}
+            <Route path="/search" component={() => <CommonSubTabs itemList={subTabs}/>}/>
             <Route path="/search/region/sido" component={SidoTable}/>
             <Route path="/search/region/gungu" component={GunguTable}/>
             <Route path="/search/region/dong" component={DongTable}/>
+{/*
             <Route path="/search/region/apt" component={AptTable}/>
+*/}
         </React.Fragment>
     );
 }

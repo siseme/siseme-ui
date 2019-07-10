@@ -11,7 +11,7 @@ class QueryTable extends Component {
         const {searchStore} = this.props;
         return (
             <List
-                header={<div>검색결과 {searchStore.searchList.length}개</div>}
+                header={<Typography.Text strong>검색결과 {searchStore.searchList.length}개</Typography.Text>}
                 bordered
                 dataSource={searchStore.searchList}
                 renderItem={item => (
@@ -27,7 +27,8 @@ class QueryTable extends Component {
         const {searchStore} = this.props;
         const {history} = this.props;
         searchStore.handleRegion(region);
-        history.goBack();
+        searchStore.getDealsList();
+        history.push('/list');
     };
 }
 

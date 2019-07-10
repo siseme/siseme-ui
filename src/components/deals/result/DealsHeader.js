@@ -27,7 +27,7 @@ class DealsHeader extends Component {
     handleInput = () => {
         const {searchStore} = this.props;
         const {history} = this.props;
-        history.push('/search/history');
+        history.push('/search/region/sido');
         searchStore.setBackUrl('/list');
         searchStore.regionSearch(searchStore.getKeywordName);
     };

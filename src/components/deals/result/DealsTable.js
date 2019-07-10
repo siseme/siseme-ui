@@ -16,7 +16,8 @@ class DealsTable extends Component {
 
     init = () => {
         return {
-            maxPriceFilter: false
+            maxPriceFilter: false,
+            newItemFilter: false
         }
     };
 
@@ -27,28 +28,29 @@ class DealsTable extends Component {
                 <PageHeader className="header"
                             title="실거래내역"
                             extra={[
-                                <Typography.Text type="secondary" strong={searchStore.sortType === 'date'}
-                                                 underline={searchStore.sortType === 'date'}
+                                <Typography.Text mark={searchStore.sortType === 'date'}
                                                  onClick={() => this.handleSort('date')}>최신순</Typography.Text>,
                                 <Typography.Text type="secondary">|</Typography.Text>,
                                 /*
                                                                 <Typography.Text type="secondary" onClick={() => this.handleSort('area')}>면적순</Typography.Text>,
                                                                 <Typography.Text type="secondary">|</Typography.Text>,
                                 */
-                                <Typography.Text type="secondary" strong={searchStore.sortType === 'mainPrice'}
-                                                 underline={searchStore.sortType === 'mainPrice'}
+                                <Typography.Text mark={searchStore.sortType === 'mainPrice'}
                                                  onClick={() => this.handleSort('mainPrice')}>가격순</Typography.Text>,
                             ]}
                             footer={
                                 <div className="footer">
-                                    <Typography.Text style={{marginRight: 12}} underline={!this.state.maxPriceFilter}
-                                                     strong={!this.state.maxPriceFilter}
-                                                     onClick={() => this.handleFilter(false)}>전체
+                                    <Typography.Text style={{marginRight: 12}}
+                                                     mark={!this.state.maxPriceFilter && !this.state.newItemFilter}
+                                                     onClick={() => this.handleNoneFilter(true)}>전체
                                         ({searchStore.dealsList.totalElements ? searchStore.dealsList.totalElements : 0}건)
                                     </Typography.Text>
-                                    <Typography.Text type="secondary" underline={this.state.maxPriceFilter}
-                                                     strong={this.state.maxPriceFilter}
-                                                     onClick={() => this.handleFilter(true)}>신고가
+                                    <Typography.Text style={{marginRight: 12}}
+                                                     mark={this.state.maxPriceFilter}
+                                                     onClick={() => this.handleMaxPriceFilter(true)}>신고가
+                                        ({searchStore.getMaxPriceDealsSize ? searchStore.getMaxPriceDealsSize : 0}건)</Typography.Text>
+                                    <Typography.Text mark={this.state.newItemFilter}
+                                                     onClick={() => this.handleNewItem(true)}>신규
                                         ({searchStore.getMaxPriceDealsSize ? searchStore.getMaxPriceDealsSize : 0}건)</Typography.Text>
                                 </div>
                             }/>
@@ -68,7 +70,9 @@ class DealsTable extends Component {
                             width="20%"
                             render={(date, record) => (
                                 <span>
-                                {date.substring(2, 4)}.{this.getMonthName(date.substring(4, 6))}.{record.dateName}
+                                {date.substring(0, 4)}
+                                <br/>
+                                {date.substring(4, 6)}.{this.getDayName(record.dateName)}
                             </span>
                             )}
                         />
@@ -116,10 +120,10 @@ class DealsTable extends Component {
                             width="19%"
                             render={(price, record) => (
                                 <span>
-                                <Typography.Text>{this.numberWithCommas(price)}</Typography.Text>
+                                <Typography.Text type={price > record.pastMaxPrice && 'danger'}
+                                                 strong={price > record.pastMaxPrice && 'danger'}>{this.numberWithCommas(price)}</Typography.Text>
                                 <br/>
-                                <Typography.Text type="secondary"
-                                                 style={{fontSize: 12}}>({this.numberWithCommas(record.pastMaxPrice)})</Typography.Text>
+                                <Typography.Text type="secondary">({this.numberWithCommas(record.pastMaxPrice)})</Typography.Text>
                         </span>
                             )}
                         />
@@ -151,8 +155,16 @@ class DealsTable extends Component {
         }
     };
 
-    handleFilter = (maxPriceFilter) => {
-        this.setState({maxPriceFilter: maxPriceFilter});
+    handleNoneFilter = () => {
+        this.setState({maxPriceFilter: false, newItemFilter: false});
+    };
+
+    handleMaxPriceFilter = (maxPriceFilter) => {
+        this.setState({maxPriceFilter: maxPriceFilter, newItemFilter: false});
+    };
+
+    handleNewItem = (newItemFilter) => {
+        this.setState({maxPriceFilter: false, newItemFilter: newItemFilter});
     };
 
     handleSort = (sort) => {
@@ -161,8 +173,8 @@ class DealsTable extends Component {
         searchStore.getDealsList();
     };
 
-    getMonthName = (value) => {
-        return value.startsWith('0') ? value.substring(1, 2) : value;
+    getDayName = (value) => {
+        return value.length < 2 ? '0' + value : value;
     };
 }
 

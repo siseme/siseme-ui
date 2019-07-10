@@ -9,7 +9,7 @@ function CommonSubTabs(props) {
         <Row className="common-sub-tabs">
             {
                 props.itemList.map((x, idx) => (
-                    <Col key={idx} className="row" span={6}>
+                    <Col key={idx} className="row" span={24/props.itemList.length}>
                         <NavLink to={x.path} activeClassName="selected">
                             <Button>{x.name}</Button>
                         </NavLink>
