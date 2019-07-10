@@ -223,7 +223,6 @@ export default class SearchStore {
                 region.type,
                 region.code)
                 .then(result => result.data);
-            console.log(result);
             this.rankResult = result;
             this.isRankingLoding = false;
         }

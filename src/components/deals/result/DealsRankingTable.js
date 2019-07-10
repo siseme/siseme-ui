@@ -221,7 +221,6 @@ class DealsRankingTable extends Component {
     };
 
     filter = (result) => {
-        console.log(result[this.state.rankType]);
         return result[this.state.rankType];
     };
 }
