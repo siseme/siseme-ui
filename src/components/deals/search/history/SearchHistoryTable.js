@@ -35,7 +35,7 @@ class SearchHistoryTable extends Component {
     }
 
     getData = () => {
-        let result = JSON.parse(localStorage.getItem('search.params.list'));
+        let result = JSON.parse(localStorage.getItem('search.params.list')).filter(x => x.region.code !== -1);
         return result ? result : [];
     };
 

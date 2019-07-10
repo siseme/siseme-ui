@@ -299,15 +299,17 @@ export default class SearchStore {
 
     @asyncAction
     async* load() {
+        this.getSidoList();
         let params = localStorage.getItem('search.params.list');
         if (params && params.length > 0) {
             let parseJson = JSON.parse(params)[0];
+            if(parseJson.region.code === -1) {
+                return;
+            }
             yield this.handleRegion(parseJson.region);
             this.startDate = new moment(parseJson.startDate);
             this.endDate = new moment(parseJson.endDate);
             yield this.getDealsList();
-        } else {
-            this.getSidoList();
         }
     };
 
