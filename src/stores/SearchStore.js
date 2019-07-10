@@ -26,6 +26,8 @@ export default class SearchStore {
     @observable endDate = moment();
 
     // trade
+    @observable isDataLoding = false;
+    @observable isRankingLoding = false;
     @observable dealsList = [];
     @observable resultCount = {
         newItemCount: 0,
@@ -202,6 +204,7 @@ export default class SearchStore {
     @asyncAction
     async* getTradeRanks() {
         if (this.getRegion !== null) {
+            this.isRankingLoding = true;
             this.resultCount = {
                 newItemCount: 0,
                 maxPriceCount: 0
@@ -215,6 +218,7 @@ export default class SearchStore {
                 .then(result => result.data);
             console.log(result);
             this.rankResult = result;
+            this.isRankingLoding = false;
         }
     };
 
@@ -240,6 +244,7 @@ export default class SearchStore {
     @asyncAction
     async* getDealsList() {
         if (this.getRegion !== null) {
+            this.isDataLoding = true;
             this.getCount();
             this.getTradeRanks();
             this.save();
@@ -262,6 +267,7 @@ export default class SearchStore {
                 .then(result => result.data);
             this.nextPageNo();
             this.dealsList = result;
+            this.isDataLoding = false;
         }
     };
 

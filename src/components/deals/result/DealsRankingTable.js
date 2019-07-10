@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import {inject, observer} from 'mobx-react/index';
-import {Button, Input, PageHeader, List, Typography, Table} from "antd";
+import {Button, Input, PageHeader, List, Typography, Table, Spin} from "antd";
 
 import "./DealsRankingTable.scss";
 
@@ -25,6 +25,7 @@ class DealsRankingTable extends Component {
         const {searchStore} = this.props;
         return (
             <div className="deals-ranking-table">
+                <Spin spinning={searchStore.isRankingLoding}>
                 <PageHeader className="header"
                             title="랭킹"
                             footer={
@@ -108,6 +109,7 @@ class DealsRankingTable extends Component {
                         />
                     }
                 </Table>
+                </Spin>
             </div>
         )
     }

@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import {inject, observer} from 'mobx-react/index';
-import {Button, Input, PageHeader, Table, Typography} from "antd";
+import {Button, Input, PageHeader, Spin, Table, Typography} from "antd";
 import InfiniteScroll from 'react-infinite-scroller';
 
 import "./DealsTable.scss";
@@ -24,6 +24,7 @@ class DealsTable extends Component {
     render() {
         const {searchStore} = this.props;
         return (
+            <Spin spinning={searchStore.isDataLoding}>
             <div className="deals-list">
                 <PageHeader className="header"
                             title="거래 내역"
@@ -127,6 +128,7 @@ class DealsTable extends Component {
                     </Table>
                 </InfiniteScroll>
             </div>
+            </Spin>
         )
     }
 
