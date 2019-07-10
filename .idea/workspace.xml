@@ -1,7 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="ab4c054b-59f6-4fda-92eb-f68f548fad0a" name="Default Changelist" comment="" />
+    <list default="true" id="ab4c054b-59f6-4fda-92eb-f68f548fad0a" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/api/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/api/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/deals/result/DealsTable.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/deals/result/DealsTable.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/stores/SearchStore.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/stores/SearchStore.js" afterDir="false" />
+    </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
     <ignored path="$PROJECT_DIR$/tmp/" />
@@ -16,8 +22,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/components/deals/result/DealsTable.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="43" column="114" selection-start-line="43" selection-start-column="114" selection-end-line="43" selection-end-column="114" />
+            <state relative-caret-position="295">
+              <caret line="155" column="16" selection-end-line="184" />
               <folding>
                 <element signature="e#0#39#0" expanded="true" />
               </folding>
@@ -29,14 +35,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>시/군</find>
-      <find>지역검색</find>
-      <find>exact</find>
-      <find>location</find>
-      <find>console.log</find>
-      <find>searchParamsList</find>
-      <find>var</find>
-      <find>load</find>
       <find>인기검색</find>
       <find>history</find>
       <find>moment</find>
@@ -59,6 +57,14 @@
       <find>maxPriceFilter</find>
       <find>handleNewItem</find>
       <find>handleNoneFilter</find>
+      <find>handleSearch</find>
+      <find>getDealList</find>
+      <find>getDeal</find>
+      <find>getDealsList</find>
+      <find>http://15.164.200.252</find>
+      <find>resultCount</find>
+      <find>getCount</find>
+      <find>filter</find>
     </findStrings>
     <replaceStrings>
       <replace>.departure</replace>
@@ -87,10 +93,10 @@
       <replace>dong</replace>
       <replace>apt</replace>
       <replace>searchStore</replace>
-      <replace>http://localhost:8080</replace>
       <replace>http://15.164.200.252</replace>
       <replace>15.164.200.252</replace>
       <replace>let</replace>
+      <replace>http://localhost:8080</replace>
     </replaceStrings>
     <dirStrings>
       <dir>$PROJECT_DIR$/src/components/destination</dir>
@@ -105,7 +111,7 @@
     </dirStrings>
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -143,7 +149,6 @@
         <option value="$PROJECT_DIR$/src/components/deals/result/DealsResultContainer.js" />
         <option value="$PROJECT_DIR$/package.json" />
         <option value="$PROJECT_DIR$/src/components/common/CommonDatePicker.js" />
-        <option value="$PROJECT_DIR$/src/api/index.js" />
         <option value="$PROJECT_DIR$/src/components/deals/search/region/RegionTable.js" />
         <option value="$PROJECT_DIR$/src/App.js" />
         <option value="$PROJECT_DIR$/src/components/common/CommonSubTabs.js" />
@@ -152,14 +157,15 @@
         <option value="$PROJECT_DIR$/src/components/common/CommonDateBar.scss" />
         <option value="$PROJECT_DIR$/src/components/common/CommonDateBar.js" />
         <option value="$PROJECT_DIR$/src/components/home/Home.js" />
-        <option value="$PROJECT_DIR$/src/components/deals/result/DealsHeader.js" />
         <option value="$PROJECT_DIR$/src/components/deals/search/DealsSearchContainer.js" />
         <option value="$PROJECT_DIR$/src/components/common/CommonTabs.js" />
         <option value="$PROJECT_DIR$/src/components/common/CommonSearchBar.js" />
         <option value="$PROJECT_DIR$/src/components/deals/search/query/QueryTable.js" />
         <option value="$PROJECT_DIR$/src/components/deals/search/history/SearchHistoryTable.js" />
-        <option value="$PROJECT_DIR$/src/stores/SearchStore.js" />
         <option value="$PROJECT_DIR$/src/components/deals/search/query/QueryBar.js" />
+        <option value="$PROJECT_DIR$/src/components/deals/result/DealsHeader.js" />
+        <option value="$PROJECT_DIR$/src/api/index.js" />
+        <option value="$PROJECT_DIR$/src/stores/SearchStore.js" />
         <option value="$PROJECT_DIR$/src/components/deals/result/DealsTable.js" />
       </list>
     </option>
@@ -339,24 +345,25 @@
       <workItem from="1561732326101" duration="32126000" />
       <workItem from="1561821928028" duration="17737000" />
       <workItem from="1562301323431" duration="61000" />
+      <workItem from="1562758157691" duration="2078000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="214071000" />
+    <option name="totallyTimeSpent" value="216274000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1440" height="877" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.75706214" visible="true" weight="0.1987315" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.75628626" weight="0.1987315" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info id="npm" order="2" sideWeight="0.24293785" side_tool="true" weight="0.1987315" />
+      <window_info id="npm" order="2" sideWeight="0.24371374" side_tool="true" weight="0.1987315" />
       <window_info id="Favorites" order="3" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32769832" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.32769832" />
-      <window_info anchor="bottom" id="Debug" order="3" visible="true" weight="0.30949286" />
+      <window_info active="true" anchor="bottom" id="Debug" order="3" visible="true" weight="0.30949286" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -538,9 +545,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/deals/search/region/data/RegionTable.js">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/deals/search/region/data/RegionTable.js" />
     <entry file="file://$PROJECT_DIR$/src/components/deals/search/region/RegionTable.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="399">
@@ -572,13 +577,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="105">
           <caret line="5" column="1" lean-forward="true" selection-start-line="5" selection-start-column="1" selection-end-line="5" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/api/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="256">
-          <caret line="23" column="31" lean-forward="true" selection-start-line="23" selection-start-column="31" selection-end-line="23" selection-end-column="31" />
         </state>
       </provider>
     </entry>
@@ -623,16 +621,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="168">
           <caret line="8" column="6" selection-start-line="8" selection-start-column="6" selection-end-line="8" selection-end-column="6" />
-          <folding>
-            <element signature="e#0#39#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/deals/result/DealsHeader.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="526">
-          <caret line="31" column="44" selection-start-line="31" selection-start-column="44" selection-end-line="31" selection-end-column="44" />
           <folding>
             <element signature="e#0#39#0" expanded="true" />
           </folding>
@@ -716,10 +704,34 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/deals/result/DealsHeader.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="264">
+          <caret line="37" column="27" selection-start-line="37" selection-start-column="27" selection-end-line="37" selection-end-column="27" />
+          <folding>
+            <element signature="e#0#39#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/api/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="26" column="10" lean-forward="true" selection-start-line="26" selection-start-column="10" selection-end-line="26" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/stores/SearchStore.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="290">
+          <caret line="34" column="27" lean-forward="true" selection-start-line="34" selection-start-column="27" selection-end-line="34" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/components/deals/result/DealsTable.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="43" column="114" selection-start-line="43" selection-start-column="114" selection-end-line="43" selection-end-column="114" />
+        <state relative-caret-position="295">
+          <caret line="155" column="16" selection-end-line="184" />
           <folding>
             <element signature="e#0#39#0" expanded="true" />
           </folding>

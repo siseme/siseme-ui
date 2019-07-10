@@ -27,6 +27,10 @@ export default class SearchStore {
 
     // trade
     @observable dealsList = [];
+    @observable resultCount = {
+        newItemCount: 0,
+        maxPriceCount: 0
+    };
     @observable pageNo = 0;
     @observable size = 100;
     @observable sortType = 'date';
@@ -195,8 +199,28 @@ export default class SearchStore {
     };
 
     @asyncAction
+    async* getCount() {
+        if (this.getRegion !== null) {
+            this.resultCount = {
+                newItemCount: 0,
+                maxPriceCount: 0
+            };
+            let region = this.getRegion;
+            let result = yield api.getCount(
+                this.startDate.format('YYYYMM'),
+                this.endDate.format('YYYYMM'),
+                region.type,
+                region.code,
+                this.tradeType)
+                .then(result => result.data);
+            this.resultCount = result;
+        }
+    };
+
+    @asyncAction
     async* getDealsList() {
         if (this.getRegion !== null) {
+            this.getCount();
             this.save();
             this.pageNo = 0;
             this.dealsList = [];

@@ -48,10 +48,10 @@ class DealsTable extends Component {
                                     <Typography.Text style={{marginRight: 12}}
                                                      mark={this.state.maxPriceFilter}
                                                      onClick={() => this.handleMaxPriceFilter(true)}>신고가
-                                        ({searchStore.getMaxPriceDealsSize ? searchStore.getMaxPriceDealsSize : 0}건)</Typography.Text>
+                                        ({searchStore.resultCount ? searchStore.resultCount.maxPriceCount : 0}건)</Typography.Text>
                                     <Typography.Text mark={this.state.newItemFilter}
                                                      onClick={() => this.handleNewItem(true)}>신규
-                                        ({searchStore.getMaxPriceDealsSize ? searchStore.getMaxPriceDealsSize : 0}건)</Typography.Text>
+                                        ({searchStore.resultCount ? searchStore.resultCount.newItemCount : 0}건)</Typography.Text>
                                 </div>
                             }/>
                 <InfiniteScroll
@@ -71,8 +71,8 @@ class DealsTable extends Component {
                             render={(date, record) => (
                                 <span>
                                 {date.substring(0, 4)}
-                                <br/>
-                                {date.substring(4, 6)}.{this.getDayName(record.dateName)}
+                                    <br/>
+                                    {date.substring(4, 6)}.{this.getDayName(record.dateName)}
                             </span>
                             )}
                         />
@@ -123,7 +123,8 @@ class DealsTable extends Component {
                                 <Typography.Text type={price > record.pastMaxPrice && 'danger'}
                                                  strong={price > record.pastMaxPrice && 'danger'}>{this.numberWithCommas(price)}</Typography.Text>
                                 <br/>
-                                <Typography.Text type="secondary">({this.numberWithCommas(record.pastMaxPrice)})</Typography.Text>
+                                <Typography.Text
+                                    type="secondary">({this.numberWithCommas(record.pastMaxPrice)})</Typography.Text>
                         </span>
                             )}
                         />
@@ -150,6 +151,8 @@ class DealsTable extends Component {
     filter = (list) => {
         if (this.state.maxPriceFilter) {
             return list && list.filter(x => x.price > x.pastMaxPrice);
+        } else if (this.state.newItemFilter) {
+            return list && list.filter(x => x.isNewData);
         } else {
             return list;
         }
