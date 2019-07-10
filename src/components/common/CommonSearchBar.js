@@ -22,6 +22,7 @@ function CommonSearchBar(props) {
                             onClick={props.handleButton}/>
                 }
                 <Input.Search
+                    readOnly
                     className='input-search'
                     onClick={props.handleInput}
                     size="large"
