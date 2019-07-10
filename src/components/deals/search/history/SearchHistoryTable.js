@@ -18,7 +18,7 @@ class SearchHistoryTable extends Component {
                 bordered
                 dataSource={data}
                 renderItem={item => (
-                    <List.Item onClick={() => this.handleRegion(item)} style={{backgroundColor: searchStore.getRegion.code === item.region.code ? 'yellow' : ''}}>
+                    <List.Item onClick={() => this.handleRegion(item)} className={searchStore.getRegion.code === item.region.code ? 'selected' : ''}>
                         <div className="row">
                             <div>
                                 <Typography.Text>{item.region.fullName}</Typography.Text>

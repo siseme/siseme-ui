@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ab4c054b-59f6-4fda-92eb-f68f548fad0a" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/src/components/common/CommonSearchBar.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/common/CommonSearchBar.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/deals/search/history/SearchHistoryTable.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/deals/search/history/SearchHistoryTable.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/deals/search/history/SearchHistoryTable.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/deals/search/history/SearchHistoryTable.scss" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -16,12 +17,12 @@
   <component name="FileEditorManager">
     <leaf>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/components/common/CommonSearchBar.js">
+        <entry file="file://$PROJECT_DIR$/src/components/deals/search/history/SearchHistoryTable.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="159">
-              <caret line="24" column="28" selection-start-line="24" selection-start-column="28" selection-end-line="24" selection-end-column="28" />
+            <state relative-caret-position="269">
+              <caret line="19" column="37" selection-start-line="19" selection-start-column="37" selection-end-line="19" selection-end-column="37" />
               <folding>
-                <element signature="e#0#26#0" expanded="true" />
+                <element signature="e#0#39#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -45,14 +46,12 @@
       <find>0.9</find>
       <find>/list</find>
       <find>style</find>
-      <find>mark</find>
       <find>1개월</find>
       <find>date-select</find>
       <find>실거래내역</find>
       <find>거래 내역</find>
       <find>&lt;Deals</find>
       <find>전체</find>
-      <find>selected</find>
       <find>최신순</find>
       <find>getCount</find>
       <find>거래량</find>
@@ -61,6 +60,8 @@
       <find>endDateOpen</find>
       <find>backgroun</find>
       <find>#ffffff</find>
+      <find>mark</find>
+      <find>selected</find>
     </findStrings>
     <replaceStrings>
       <replace>.departure</replace>
@@ -137,14 +138,12 @@
         <option value="$PROJECT_DIR$/package.json" />
         <option value="$PROJECT_DIR$/src/App.js" />
         <option value="$PROJECT_DIR$/src/components/common/CommonSubTabs.js" />
-        <option value="$PROJECT_DIR$/src/components/deals/search/history/SearchHistoryTable.scss" />
         <option value="$PROJECT_DIR$/src/components/deals/search/region/data/DongTable.js" />
         <option value="$PROJECT_DIR$/src/components/home/Home.js" />
         <option value="$PROJECT_DIR$/src/components/common/CommonTabs.js" />
         <option value="$PROJECT_DIR$/src/components/deals/search/DealsSearchContainer.js" />
         <option value="$PROJECT_DIR$/src/components/deals/search/region/RegionTable.js" />
         <option value="$PROJECT_DIR$/src/components/deals/search/query/QueryTable.js" />
-        <option value="$PROJECT_DIR$/src/components/deals/search/history/SearchHistoryTable.js" />
         <option value="$PROJECT_DIR$/src/components/deals/result/DealsHeader.js" />
         <option value="$PROJECT_DIR$/src/components/deals/search/region/RegionBar.js" />
         <option value="$PROJECT_DIR$/src/components/deals/search/region/RegionTable.scss" />
@@ -163,6 +162,8 @@
         <option value="$PROJECT_DIR$/src/components/deals/result/DealsRankingTable.scss" />
         <option value="$PROJECT_DIR$/src/components/deals/result/DealsTable.scss" />
         <option value="$PROJECT_DIR$/src/components/common/CommonSearchBar.js" />
+        <option value="$PROJECT_DIR$/src/components/deals/search/history/SearchHistoryTable.scss" />
+        <option value="$PROJECT_DIR$/src/components/deals/search/history/SearchHistoryTable.js" />
       </list>
     </option>
   </component>
@@ -341,18 +342,18 @@
       <workItem from="1561732326101" duration="32126000" />
       <workItem from="1561821928028" duration="17737000" />
       <workItem from="1562301323431" duration="61000" />
-      <workItem from="1562758157691" duration="10481000" />
+      <workItem from="1562758157691" duration="10785000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="224677000" />
+    <option name="totallyTimeSpent" value="224981000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1440" height="877" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.75628626" visible="true" weight="0.1987315" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.75628626" weight="0.1987315" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="npm" order="2" sideWeight="0.24371374" side_tool="true" weight="0.1987315" />
       <window_info id="Favorites" order="3" side_tool="true" />
@@ -367,7 +368,7 @@
       <window_info anchor="bottom" id="Version Control" order="8" weight="0.32899868" />
       <window_info anchor="bottom" id="TypeScript" order="9" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="11" visible="true" weight="0.32769832" />
+      <window_info anchor="bottom" id="Terminal" order="11" visible="true" weight="0.32769832" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -491,13 +492,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/deals/search/history/SearchHistoryTable.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="5" column="1" lean-forward="true" selection-start-line="5" selection-start-column="1" selection-end-line="5" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/components/deals/search/region/data/DongTable.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="235">
@@ -575,17 +569,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/deals/search/history/SearchHistoryTable.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="252">
-          <caret line="51" lean-forward="true" selection-start-line="51" selection-end-line="51" />
-          <folding>
-            <element signature="e#0#39#0" expanded="true" />
-            <element signature="n#SearchHistoryTable#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/components/deals/search/query/QueryTable.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="285">
@@ -626,13 +609,6 @@
     <entry file="file://$PROJECT_DIR$/src/components/common/CommonSearchBar.scss">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-2" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/deals/search/region/RegionTable.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="320">
-          <caret line="19" selection-start-line="19" selection-end-line="19" />
-        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/components/common/CommonTabs.scss">
@@ -731,19 +707,43 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/deals/result/DealsTable.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="47">
-          <caret line="28" column="23" lean-forward="true" selection-start-line="28" selection-start-column="23" selection-end-line="28" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/components/common/CommonSearchBar.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="159">
           <caret line="24" column="28" selection-start-line="24" selection-start-column="28" selection-end-line="24" selection-end-column="28" />
           <folding>
             <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/deals/search/region/RegionTable.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="369">
+          <caret line="19" selection-start-line="16" selection-end-line="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/deals/result/DealsTable.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="464">
+          <caret line="24" selection-start-line="22" selection-end-line="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/deals/search/history/SearchHistoryTable.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="273">
+          <caret line="13" column="1" lean-forward="true" selection-start-line="13" selection-start-column="1" selection-end-line="13" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/deals/search/history/SearchHistoryTable.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="269">
+          <caret line="19" column="37" selection-start-line="19" selection-start-column="37" selection-end-line="19" selection-end-column="37" />
+          <folding>
+            <element signature="e#0#39#0" expanded="true" />
           </folding>
         </state>
       </provider>

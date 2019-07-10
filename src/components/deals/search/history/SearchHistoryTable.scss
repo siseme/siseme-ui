@@ -1,4 +1,12 @@
 .search-history-table {
+  .selected {
+    background-color: #595959;
+    border: 1px solid #595959;
+    span {
+      color: #ffffff;
+    }
+  }
+
   .ant-list-item {
     display: flex;
     justify-content: space-between;
