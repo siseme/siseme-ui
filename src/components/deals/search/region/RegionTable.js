@@ -15,7 +15,7 @@ function RegionTable(props) {
                 props.allRegionType &&
                 <Col span={24}
                      onClick={() => props.handleClick(ALL)}>
-                    <Button style={{backgroundColor: props.item.code === -1 ? 'yellow' : ''}}>전체</Button>
+                    <Button className={props.item.code === -1 ? 'item selected' : 'item'}>전체</Button>
                 </Col>
             }
             {
@@ -23,7 +23,7 @@ function RegionTable(props) {
                 props.itemList.map((x, idx) => (
                     <Col span={8}
                          key={idx}>
-                        <Button style={{backgroundColor: props.item.name === x.name ? 'yellow' : ''}}
+                        <Button className={props.item.name === x.name ? 'item selected' : 'item'}
                                 onClick={() => props.handleClick(x)}>{x.name}</Button>
                     </Col>
                 ))

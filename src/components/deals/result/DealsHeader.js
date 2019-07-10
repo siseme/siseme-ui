@@ -28,7 +28,7 @@ class DealsHeader extends Component {
         const {searchStore} = this.props;
         const {history} = this.props;
         history.push('/search/region/sido');
-        searchStore.setBackUrl('/list');
+        searchStore.setBackUrl('/');
         searchStore.regionSearch(searchStore.getKeywordName);
     };
 

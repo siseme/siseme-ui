@@ -28,7 +28,7 @@ class QueryTable extends Component {
         const {history} = this.props;
         searchStore.handleRegion(region);
         searchStore.getDealsList();
-        history.push('/list');
+        history.push('/');
     };
 }
 

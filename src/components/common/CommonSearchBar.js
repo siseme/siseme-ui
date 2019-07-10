@@ -8,20 +8,27 @@ function CommonSearchBar(props) {
         <div className="common-search-bar">
             <div className="row">
                 {
-                    props.icon &&
-                    <Button icon={props.icon}
+                    props.icon ?
+                    <Button className="back-btn"
+                            icon={props.icon}
+                            size="large"
+                            type="default"
+                            onClick={props.handleButton}/>
+                            :
+                    <Button className="back-btn"
+                            icon="home"
                             size="large"
                             type="default"
                             onClick={props.handleButton}/>
                 }
                 <Input.Search
+                    className='input-search'
                     onClick={props.handleInput}
-                    allowClear
                     size="large"
                     placeholder={props.placeholder}
                     value={props.value}
                     onSearch={props.handleSearch}
-                    enterButton
+                    enterButton="검색"
                 />
             </div>
         </div>

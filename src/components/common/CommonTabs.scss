@@ -1,17 +1,24 @@
 .common-tabs {
+  height: 40px;
+  margin-top: 4px;
+  margin-bottom: 10px;
+
   .row {
+    height: 100%;
     a {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      height: 100%;
       width: 100%;
 
-      button {
-        width: 100%;
-      }
+      font-size: 1rem;
     }
-  }
 
-  .selected {
-    button {
-      background-color: yellow;
+    .selected {
+      font-weight: 800;
+      border-bottom: 2px solid #595959;
     }
   }
 }

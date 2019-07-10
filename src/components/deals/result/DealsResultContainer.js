@@ -7,9 +7,9 @@ import CommonDateBar from "../../common/CommonDateBar";
 function DealsResultContainer(props) {
     return (
         <React.Fragment>
-            <Route exact path="/list" component={DealsHeader}/>
-            <Route exact path="/list" component={CommonDateBar}/>
-            <Route exact path="/list" component={DealsTable}/>
+            <Route exact path="/" component={DealsHeader}/>
+            <Route exact path="/" component={CommonDateBar}/>
+            <Route exact path="/" component={DealsTable}/>
         </React.Fragment>
     );
 }

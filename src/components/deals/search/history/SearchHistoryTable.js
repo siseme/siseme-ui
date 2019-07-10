@@ -44,7 +44,7 @@ class SearchHistoryTable extends Component {
         const {searchStore, history} = this.props;
         searchStore.handleRegion(item.region);
         searchStore.getDealsList();
-        history.push('/list');
+        history.push('/');
     };
 }
 

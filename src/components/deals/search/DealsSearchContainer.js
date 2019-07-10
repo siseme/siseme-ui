@@ -65,7 +65,7 @@ function DealsSearchContainer(props) {
 {/*
             <Route path="/search" component={(e) => <CommonTabs itemList={tabs} location={e.location}/>}/>
 */}
-            <Route path="/search" component={() => <CommonSubTabs itemList={subTabs}/>}/>
+            <Route path="/search" component={() => <CommonTabs itemList={subTabs}/>}/>
             <Route path="/search/region/sido" component={SidoTable}/>
             <Route path="/search/region/gungu" component={GunguTable}/>
             <Route path="/search/region/dong" component={DongTable}/>

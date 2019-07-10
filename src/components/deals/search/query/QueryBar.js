@@ -13,18 +13,19 @@ class QueryBar extends Component {
         return (
             <div className="query-input">
                 <div className="row">
-                    <Button icon="arrow-left"
+                    <Button className="back-btn"
+                            icon="arrow-left"
                             size="large"
                             type="default"
                             onClick={this.back}/>
                     <Input.Search
-                        allowClear
+                        className='input-search'
                         ref={(input) => input && input.focus()}
                         size="large"
                         placeholder="지역,아파트명 검색"
                         defaultValue={searchStore.getRegionName}
                         onSearch={this.search}
-                        enterButton
+                        enterButton="검색"
                     />
                 </div>
             </div>

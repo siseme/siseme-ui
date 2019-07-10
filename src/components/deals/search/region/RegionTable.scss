@@ -1,13 +1,21 @@
 .region-list {
+  .ant-btn {
+    border-radius: 0;
+  }
   div {
     button {
       width: 100% !important;
     }
   }
 
+  .item {
+    font-size: 0.9rem;
+    height: 45px;
+  }
+
   .selected {
-    button {
-      background-color: yellow;
-    }
+    background-color: #595959;
+    border: 1px solid #595959;
+    color: #ffffff;
   }
 }

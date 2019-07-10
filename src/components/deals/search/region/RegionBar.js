@@ -39,7 +39,7 @@ class RegionBar extends Component {
         const {searchStore} = this.props;
         const {history} = this.props;
         searchStore.getDealsList();
-        history.push('/list');
+        history.push('/');
     };
 }
 

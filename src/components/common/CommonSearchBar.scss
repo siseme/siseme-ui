@@ -1,8 +1,36 @@
 .common-search-bar {
+  background-color: #1231b7;
+  height: 56px;
   display: flex;
   flex-direction: column;
 
   .row {
+    height: 100%;
     display: flex;
+    align-items: center;
+
+    .back-btn {
+      background-color: #1231b7;
+      border: 1px solid #1231b7;
+      color: #ffffff;
+      margin-left: 4px;
+      margin-right: 4px;
+    }
+
+    .input-search {
+      padding-right: 8px;
+      padding-top: 11px;
+      padding-bottom: 11px;
+
+      input {
+        border-radius: 0;
+      }
+
+      button {
+        border-radius: 0;
+        background-color: #1231b7;
+        border: 1px solid #1231b7;
+      }
+    }
   }
 }
