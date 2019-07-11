@@ -13,12 +13,7 @@ class DealsRankingTable extends Component {
     };
 
     init = () => {
-        // numberOfTradeRanks numberOfNewHighPriceRanks unitPriceRanks
-        return {rankType: 'numberOfTradeRanks'}
-    };
-
-    handleChange = (rankType) => {
-        this.setState({rankType: rankType});
+        return {}
     };
 
     render() {
@@ -30,19 +25,19 @@ class DealsRankingTable extends Component {
                                 title="랭킹"
                                 footer={
                                     <div className="footer">
-                                        <Typography.Text onClick={() => this.handleChange('numberOfTradeRanks')}
+                                        <Typography.Text onClick={() => searchStore.handleRankType('numberOfTradeRanks')}
                                                          style={{marginRight: 12}}
-                                                         className={this.state.rankType === 'numberOfTradeRanks' ? 'selected' : ''}>거래량</Typography.Text>
+                                                         className={searchStore.rankType === 'numberOfTradeRanks' ? 'selected' : ''}>거래량</Typography.Text>
                                         {
                                             searchStore.tradeType === 'trade' &&
-                                            <Typography.Text onClick={() => this.handleChange('numberOfNewHighPriceRanks')}
+                                            <Typography.Text onClick={() => searchStore.handleRankType('numberOfNewHighPriceRanks')}
                                                              style={{marginRight: 12}}
-                                                             className={this.state.rankType === 'numberOfNewHighPriceRanks' ? 'selected' : ''}>신고가</Typography.Text>
+                                                             className={searchStore.rankType === 'numberOfNewHighPriceRanks' ? 'selected' : ''}>신고가</Typography.Text>
                                         }
                                         {
                                             searchStore.tradeType === 'trade' &&
-                                            <Typography.Text onClick={() => this.handleChange('unitPriceRanks')}
-                                                             className={this.state.rankType === 'unitPriceRanks' ? 'selected' : ''}>평당가</Typography.Text>
+                                            <Typography.Text onClick={() => searchStore.handleRankType('unitPriceRanks')}
+                                                             className={searchStore.rankType === 'unitPriceRanks' ? 'selected' : ''}>평당가</Typography.Text>
                                         }
                                     </div>
                                 }/>
@@ -77,7 +72,7 @@ class DealsRankingTable extends Component {
                                 )}
                             />
                             {
-                                this.state.rankType === 'numberOfTradeRanks' &&
+                                searchStore.rankType === 'numberOfTradeRanks' &&
                                 <Table.Column
                                     align="center"
                                     title="건수"
@@ -92,7 +87,7 @@ class DealsRankingTable extends Component {
                                 />
                             }
                             {
-                                this.state.rankType === 'numberOfNewHighPriceRanks' &&
+                                searchStore.rankType === 'numberOfNewHighPriceRanks' &&
                                 <Table.Column
                                     align="center"
                                     title="건수"
@@ -107,7 +102,7 @@ class DealsRankingTable extends Component {
                                 />
                             }
                             {
-                                this.state.rankType === 'unitPriceRanks' &&
+                                searchStore.rankType === 'unitPriceRanks' &&
                                 <Table.Column
                                     align="center"
                                     title="가격"
@@ -221,7 +216,8 @@ class DealsRankingTable extends Component {
     };
 
     filter = (result) => {
-        return result[this.state.rankType];
+        const {searchStore} = this.props;
+        return result[searchStore.rankType];
     };
 }
 

@@ -2,7 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ab4c054b-59f6-4fda-92eb-f68f548fad0a" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/src/components/deals/result/DealsRankingTable.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/deals/result/DealsRankingTable.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/deals/result/DealsRankingTable.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/deals/result/DealsRankingTable.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/deals/result/DealsTable.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/deals/result/DealsTable.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/stores/SearchStore.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/stores/SearchStore.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -16,10 +19,10 @@
   <component name="FileEditorManager">
     <leaf>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/components/deals/result/DealsTable.scss">
+        <entry file="file://$PROJECT_DIR$/src/stores/SearchStore.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="257">
-              <caret line="27" column="13" selection-start-line="27" selection-start-column="13" selection-end-line="27" selection-end-column="13" />
+            <state relative-caret-position="456">
+              <caret line="287" selection-start-line="287" selection-end-line="287" />
             </state>
           </provider>
         </entry>
@@ -28,20 +31,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>&lt;Deals</find>
-      <find>전체</find>
-      <find>최신순</find>
-      <find>getCount</find>
-      <find>num</find>
-      <find>com</find>
-      <find>endDateOpen</find>
-      <find>backgroun</find>
-      <find>#ffffff</find>
-      <find>mark</find>
-      <find>selected</find>
-      <find>init</find>
-      <find>commontabs</find>
-      <find>getDealsList</find>
       <find>isRankingLoding</find>
       <find>ant-</find>
       <find>신규</find>
@@ -58,16 +47,22 @@
       <find>getKeyword</find>
       <find>거래량</find>
       <find>거래없음</find>
+      <find>this.handleChange</find>
+      <find>this.state.rankType</find>
+      <find>getRank</find>
+      <find>sea</find>
+      <find>searchStore</find>
+      <find>maxPriceFilter</find>
+      <find>handleMaxPriceFilter</find>
+      <find>handleNewItemFilter</find>
+      <find>this.handleNoneFilter</find>
+      <find>this.state.maxPriceFilter</find>
+      <find>this.state.newItemFilter</find>
+      <find>this.handleMaxPriceFilter</find>
+      <find>this.handleNewItemFilter</find>
+      <find>handleNoneFilter</find>
     </findStrings>
     <replaceStrings>
-      <replace>.departure</replace>
-      <replace>.destination</replace>
-      <replace>this.props</replace>
-      <replace>thi</replace>
-      <replace>rootStore.selectedRoute.path</replace>
-      <replace>rootStore.selectedRoute</replace>
-      <replace>rootStore</replace>
-      <replace>rootStore.parking</replace>
       <replace>item</replace>
       <replace>.detail-</replace>
       <replace>rootStore.summaryPath.</replace>
@@ -90,6 +85,14 @@
       <replace>15.164.200.252</replace>
       <replace>let</replace>
       <replace>http://localhost:8080</replace>
+      <replace>searchStore.handleChange</replace>
+      <replace>searchStore.handleRankType</replace>
+      <replace>searchStore.rankType</replace>
+      <replace>searchStore.handleNoneFilter</replace>
+      <replace>searchStore.maxPriceFilter</replace>
+      <replace>searchStore.newItemFilter</replace>
+      <replace>searchStore.handleMaxPriceFilter</replace>
+      <replace>searchStore.handleNewItemFilter</replace>
     </replaceStrings>
     <dirStrings>
       <dir>$PROJECT_DIR$/src/components/destination</dir>
@@ -148,26 +151,25 @@
         <option value="$PROJECT_DIR$/src/components/deals/result/DealsTabs.scss" />
         <option value="$PROJECT_DIR$/src/components/common/CommonDateBar.scss" />
         <option value="$PROJECT_DIR$/package.json" />
-        <option value="$PROJECT_DIR$/src/components/deals/result/DealsRankingTable.js" />
         <option value="$PROJECT_DIR$/src/components/deals/search/history/SearchHistoryTable.js" />
-        <option value="$PROJECT_DIR$/src/components/deals/result/DealsTable.js" />
         <option value="$PROJECT_DIR$/src/components/deals/search/region/RegionBar.js" />
         <option value="$PROJECT_DIR$/src/components/deals/search/query/QueryBar.js" />
         <option value="$PROJECT_DIR$/src/components/deals/result/DealsTabs.js" />
         <option value="$PROJECT_DIR$/src/components/deals/search/region/data/DongTable.js" />
         <option value="$PROJECT_DIR$/src/components/common/CommonDatePicker.js" />
         <option value="$PROJECT_DIR$/src/components/deals/result/DealsHeader.js" />
-        <option value="$PROJECT_DIR$/src/stores/SearchStore.js" />
         <option value="$PROJECT_DIR$/src/components/deals/result/DealsRankingTable.scss" />
         <option value="$PROJECT_DIR$/src/components/deals/result/DealsTable.scss" />
+        <option value="$PROJECT_DIR$/src/components/deals/result/DealsRankingTable.js" />
+        <option value="$PROJECT_DIR$/src/components/deals/result/DealsTable.js" />
+        <option value="$PROJECT_DIR$/src/stores/SearchStore.js" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="720" />
+  <component name="ProjectFrameBounds">
     <option name="y" value="23" />
-    <option name="width" value="720" />
-    <option name="height" value="877" />
+    <option name="width" value="1024" />
+    <option name="height" value="1129" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -343,20 +345,20 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="229924000" />
+    <option name="totallyTimeSpent" value="231212000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="1440" height="877" extended-state="6" />
+    <frame x="0" y="23" width="1024" height="1129" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.75628626" visible="true" weight="0.1987315" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.75628626" visible="true" weight="0.1987315" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="npm" order="2" sideWeight="0.24371374" side_tool="true" weight="0.1987315" />
       <window_info id="Favorites" order="3" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32769832" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.32769832" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.30949286" />
+      <window_info active="true" anchor="bottom" id="Debug" order="3" visible="true" weight="0.30858245" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -364,7 +366,7 @@
       <window_info anchor="bottom" id="Version Control" order="8" weight="0.32899868" />
       <window_info anchor="bottom" id="TypeScript" order="9" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
-      <window_info anchor="bottom" id="Terminal" order="11" visible="true" weight="0.32769832" />
+      <window_info anchor="bottom" id="Terminal" order="11" weight="0.32690454" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -701,13 +703,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/stores/SearchStore.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="310">
-          <caret line="86" column="34" lean-forward="true" selection-start-line="86" selection-start-column="34" selection-end-line="86" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/components/deals/result/DealsTabs.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="310">
@@ -718,13 +713,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/deals/result/DealsRankingTable.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="84">
-          <caret line="4" column="18" selection-start-line="4" selection-start-column="18" selection-end-line="4" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/components/deals/result/DealsRankingTable.scss">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="228">
@@ -732,17 +720,37 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/deals/result/DealsTable.js">
+    <entry file="file://$PROJECT_DIR$/src/components/deals/result/DealsTable.scss">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="5" column="11" lean-forward="true" selection-start-line="5" selection-start-column="11" selection-end-line="5" selection-end-column="11" />
+        <state relative-caret-position="318">
+          <caret line="27" column="13" selection-start-line="27" selection-start-column="13" selection-end-line="27" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/deals/result/DealsTable.scss">
+    <entry file="file://$PROJECT_DIR$/src/components/deals/result/DealsRankingTable.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="257">
-          <caret line="27" column="13" selection-start-line="27" selection-start-column="13" selection-end-line="27" selection-end-column="13" />
+        <state relative-caret-position="474">
+          <caret line="216" lean-forward="true" selection-start-line="216" selection-end-line="216" />
+          <folding>
+            <element signature="e#0#39#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/deals/result/DealsTable.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-879">
+          <caret line="45" column="102" selection-start-line="45" selection-start-column="86" selection-end-line="45" selection-end-column="102" />
+          <folding>
+            <element signature="e#0#39#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/stores/SearchStore.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="456">
+          <caret line="287" selection-start-line="287" selection-end-line="287" />
         </state>
       </provider>
     </entry>

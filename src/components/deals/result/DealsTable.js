@@ -14,10 +14,7 @@ class DealsTable extends Component {
     };
 
     init = () => {
-        return {
-            maxPriceFilter: false,
-            newItemFilter: false
-        }
+        return {}
     };
 
     render() {
@@ -45,8 +42,8 @@ class DealsTable extends Component {
                                             (searchStore.dealsList.totalElements ? searchStore.dealsList.totalElements : 0) === 0 ?
                                                 <Typography.Text style={{marginRight: 12}} delete>거래없음</Typography.Text> :
                                                 <Typography.Text style={{marginRight: 12}}
-                                                                 className={!this.state.maxPriceFilter && !this.state.newItemFilter ? 'selected' : ''}
-                                                                 onClick={() => this.handleNoneFilter(true)}>전체
+                                                                 className={!searchStore.maxPriceFilter && !searchStore.newItemFilter ? 'selected' : ''}
+                                                                 onClick={searchStore.handleNoneFilter}>전체
                                                     ({this.numberWithCommas(searchStore.dealsList.totalElements ? searchStore.dealsList.totalElements : 0)}건)
                                                 </Typography.Text>
                                         }
@@ -54,15 +51,15 @@ class DealsTable extends Component {
                                             (searchStore.resultCount ? searchStore.resultCount.maxPriceCount : 0) === 0 ?
                                                 <Typography.Text style={{marginRight: 12}} delete>신고가없음</Typography.Text> :
                                                 <Typography.Text style={{marginRight: 12}}
-                                                                 className={this.state.maxPriceFilter ? 'selected' : ''}
-                                                                 onClick={() => this.handleMaxPriceFilter(true)}>신고가
+                                                                 className={searchStore.maxPriceFilter ? 'selected' : ''}
+                                                                 onClick={() => searchStore.handleMaxPriceFilter(true)}>신고가
                                                     ({this.numberWithCommas(searchStore.resultCount ? searchStore.resultCount.maxPriceCount : 0)}건)</Typography.Text>
                                         }
                                         {
                                             (searchStore.resultCount ? searchStore.resultCount.newItemCount : 0) === 0 ?
                                                 <Typography.Text delete>신규없음</Typography.Text> :
-                                                <Typography.Text className={this.state.newItemFilter ? 'selected' : ''}
-                                                                 onClick={() => this.handleNewItem(true)}>신규
+                                                <Typography.Text className={searchStore.newItemFilter ? 'selected' : ''}
+                                                                 onClick={() => searchStore.handleNewItemFilter(true)}>신규
                                                     ({this.numberWithCommas(searchStore.resultCount ? searchStore.resultCount.newItemCount : 0)}건)</Typography.Text>
                                         }
                                     </div>
@@ -177,25 +174,14 @@ class DealsTable extends Component {
     };
 
     filter = (list) => {
-        if (this.state.maxPriceFilter) {
+        const {searchStore} = this.props;
+        if (searchStore.maxPriceFilter) {
             return list && list.filter(x => x.price > x.pastMaxPrice);
-        } else if (this.state.newItemFilter) {
+        } else if (searchStore.newItemFilter) {
             return list && list.filter(x => x.isNewData);
         } else {
             return list;
         }
-    };
-
-    handleNoneFilter = () => {
-        this.setState({maxPriceFilter: false, newItemFilter: false});
-    };
-
-    handleMaxPriceFilter = (maxPriceFilter) => {
-        this.setState({maxPriceFilter: maxPriceFilter, newItemFilter: false});
-    };
-
-    handleNewItem = (newItemFilter) => {
-        this.setState({maxPriceFilter: false, newItemFilter: newItemFilter});
     };
 
     handleSort = (sort) => {

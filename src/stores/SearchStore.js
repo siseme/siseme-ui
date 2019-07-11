@@ -41,6 +41,10 @@ export default class SearchStore {
     @observable areaType = 0;
     @observable isNewData = false;
     @observable tradeType = 'trade';
+    // numberOfTradeRanks numberOfNewHighPriceRanks unitPriceRanks
+    @observable rankType = 'numberOfTradeRanks';
+    @observable newItemFilter = false;
+    @observable maxPriceFilter = false;
 
     constructor(root) {
         this.root = root;
@@ -104,6 +108,29 @@ export default class SearchStore {
     @computed
     get getMaxPriceDealsSize() {
         return this.dealsList.contents ? this.dealsList.contents.filter(x => x.price > x.pastMaxPrice).length : 0;
+    };
+
+    @action
+    handleNoneFilter = () => {
+        this.maxPriceFilter = false;
+        this.newItemFilter = false;
+    };
+
+    @action
+    handleMaxPriceFilter = (maxPriceFilter) => {
+        this.maxPriceFilter = maxPriceFilter;
+        this.newItemFilter = false;
+    };
+
+    @action
+    handleNewItemFilter = (newItemFilter) => {
+        this.maxPriceFilter = false;
+        this.newItemFilter = newItemFilter;
+    };
+
+    @action
+    handleRankType = (rankType) => {
+        this.rankType = rankType;
     };
 
     @action
@@ -215,6 +242,7 @@ export default class SearchStore {
     @asyncAction
     async* getTradeRanks() {
         if (this.getRegion !== null) {
+            this.handleRankType('numberOfTradeRanks');
             this.isRankingLoding = true;
             this.resultCount = {
                 newItemCount: 0,
@@ -256,6 +284,7 @@ export default class SearchStore {
     async* getDealsList() {
         if (this.getRegion !== null) {
             this.isDataLoding = true;
+            this.handleNoneFilter();
             this.getCount();
             this.getTradeRanks();
             this.save();
