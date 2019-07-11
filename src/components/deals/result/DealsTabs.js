@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {Col, Row, Typography} from "antd";
+import {Col, Row, Spin, Typography} from "antd";
 
 import "./DealsTabs.scss";
 import {inject, observer} from "mobx-react";
@@ -10,6 +10,7 @@ class DealsTabs extends Component {
     render() {
         const {searchStore} = this.props;
         return (
+            <Spin spinning={searchStore.isDataLoding && searchStore.isRankingLoding}>
             <Row className="deals-tabs">
                 {
                     this.props.itemList.map((x, idx) => (
@@ -22,6 +23,7 @@ class DealsTabs extends Component {
                     ))
                 }
             </Row>
+            </Spin>
         );
     }
 

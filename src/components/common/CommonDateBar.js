@@ -4,7 +4,7 @@ import {inject, observer} from "mobx-react";
 import CommonDatePicker from "./CommonDatePicker";
 
 import "./CommonDateBar.scss";
-import {Button, Typography} from "antd";
+import {Button, Spin, Typography} from "antd";
 
 @inject('searchStore')
 @observer
@@ -69,6 +69,7 @@ class CommonDateBar extends Component {
     render() {
         const {searchStore} = this.props;
         return (
+            <Spin spinning={searchStore.isDataLoding && searchStore.isRankingLoding}>
             <div className="common-date-bar">
                 <div className="date-select">
                     <Typography.Text type="secondary" className={this.state.range === 1 ? 'selected' : ''}
@@ -93,6 +94,7 @@ class CommonDateBar extends Component {
                                       handleDate={searchStore.handleEndDate}/>
                 </div>
             </div>
+            </Spin>
         )
     }
 }
