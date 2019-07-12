@@ -110,6 +110,11 @@ export default class SearchStore {
         return this.dealsList.contents ? this.dealsList.contents.filter(x => x.price > x.pastMaxPrice).length : 0;
     };
 
+    @computed
+    get getResultUrl() {
+        console.log(this.getRegion.fullName);
+    };
+
     @action
     handleNoneFilter = () => {
         this.maxPriceFilter = false;
@@ -357,6 +362,12 @@ export default class SearchStore {
             this.endDate = new moment(parseJson.endDate);
             yield this.getDealsList();
         }
+    };
+
+    @asyncAction
+    async* getRegionByFullName(fullName) {
+        let region = yield api.getRegionByFullName(fullName).then(result => result.data);
+        yield this.handleRegion(region);
     };
 
     initDong = () => {

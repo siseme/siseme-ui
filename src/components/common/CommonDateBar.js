@@ -73,9 +73,9 @@ class CommonDateBar extends Component {
                 <div className="common-date-bar">
                     <div style={{marginRight: 14}}>
                         <Button.Group>
-                            <Button className="date-button" size="medium"
+                            <Button className="date-button" size="small"
                                     onClick={this.handleStartDateOpen}>{searchStore.startDate.format('YYYY.MM')}</Button>
-                            <Button className="date-button" size="medium"
+                            <Button className="date-button" size="small"
                                     onClick={this.handleEndDateOpen}>{searchStore.endDate.format('YYYY.MM')}</Button>
                         </Button.Group>
                         <CommonDatePicker value={searchStore.startDate.toDate()}

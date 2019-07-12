@@ -53,6 +53,9 @@ export const api = {
         };
         return get('http://15.164.200.252/dev/api/v2/trade/', params);
     },
+    getRegionByFullName: (fullName) => {
+        return get('http://15.164.200.252/dev/api/v2/search/regions/name/' + fullName, {});
+    },
     query: (keyword) => {
         let params = {
             "keyword": keyword

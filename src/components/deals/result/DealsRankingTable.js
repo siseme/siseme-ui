@@ -131,7 +131,7 @@ class DealsRankingTable extends Component {
                         </Table>
                     }
                     {
-                        searchStore.tradeType === 'ticket' &&
+                        !this.state.collapse && searchStore.tradeType === 'ticket' &&
                         <Table className="table"
                                dataSource={searchStore.rankResult.ticketCountRanks}
                                size="small"
@@ -175,7 +175,7 @@ class DealsRankingTable extends Component {
                         </Table>
                     }
                     {
-                        searchStore.tradeType === 'rent' &&
+                        !this.state.collapse && searchStore.tradeType === 'rent' &&
                         <Table className="table"
                                dataSource={searchStore.rankResult.rentCountRanks}
                                size="small"
