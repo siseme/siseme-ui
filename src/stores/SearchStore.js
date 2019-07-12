@@ -110,11 +110,6 @@ export default class SearchStore {
         return this.dealsList.contents ? this.dealsList.contents.filter(x => x.price > x.pastMaxPrice).length : 0;
     };
 
-    @computed
-    get getResultUrl() {
-        console.log(this.getRegion.fullName);
-    };
-
     @action
     handleNoneFilter = () => {
         this.maxPriceFilter = false;

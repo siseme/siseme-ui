@@ -2,16 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ab4c054b-59f6-4fda-92eb-f68f548fad0a" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/components/redirect/Redirect.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/api/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/api/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/common/CommonDateBar.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/common/CommonDateBar.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/deals/result/DealsRankingTable.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/deals/result/DealsRankingTable.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/deals/result/DealsRankingTable.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/deals/result/DealsRankingTable.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/stores/SearchStore.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/stores/SearchStore.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -25,13 +17,10 @@
   <component name="FileEditorManager">
     <leaf>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/components/redirect/Redirect.js">
+        <entry file="file://$PROJECT_DIR$/src/components/deals/result/DealsTable.scss">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="238">
-              <caret line="21" column="37" selection-start-line="21" selection-start-column="37" selection-end-line="21" selection-end-column="37" />
-              <folding>
-                <element signature="e#0#39#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="223">
+              <caret line="23" column="3" selection-start-line="23" selection-start-column="3" selection-end-line="23" selection-end-column="3" />
             </state>
           </provider>
         </entry>
@@ -40,8 +29,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>sea</find>
-      <find>searchStore</find>
       <find>maxPriceFilter</find>
       <find>handleMaxPriceFilter</find>
       <find>handleNewItemFilter</find>
@@ -70,6 +57,8 @@
       <find>push('/')</find>
       <find>push('/r')</find>
       <find>size</find>
+      <find>get</find>
+      <find>getResult</find>
     </findStrings>
     <replaceStrings>
       <replace>item</replace>
@@ -152,8 +141,6 @@
         <option value="$PROJECT_DIR$/public/index.html" />
         <option value="$PROJECT_DIR$/src/components/deals/result/DealsTabs.scss" />
         <option value="$PROJECT_DIR$/src/components/deals/result/DealsTabs.js" />
-        <option value="$PROJECT_DIR$/src/components/deals/result/DealsRankingTable.scss" />
-        <option value="$PROJECT_DIR$/src/components/deals/result/DealsTable.scss" />
         <option value="$PROJECT_DIR$/src/components/common/CommonTabs.scss" />
         <option value="$PROJECT_DIR$/src/components/deals/search/history/SearchHistoryTable.scss" />
         <option value="$PROJECT_DIR$/src/components/common/CommonSearchBar.scss" />
@@ -167,11 +154,13 @@
         <option value="$PROJECT_DIR$/src/components/deals/search/history/SearchHistoryTable.js" />
         <option value="$PROJECT_DIR$/src/components/deals/result/DealsResultContainer.js" />
         <option value="$PROJECT_DIR$/src/api/index.js" />
-        <option value="$PROJECT_DIR$/src/stores/SearchStore.js" />
         <option value="$PROJECT_DIR$/src/App.js" />
         <option value="$PROJECT_DIR$/src/components/deals/result/DealsHeader.js" />
         <option value="$PROJECT_DIR$/src/components/common/CommonDateBar.js" />
         <option value="$PROJECT_DIR$/src/components/redirect/Redirect.js" />
+        <option value="$PROJECT_DIR$/src/stores/SearchStore.js" />
+        <option value="$PROJECT_DIR$/src/components/deals/result/DealsRankingTable.scss" />
+        <option value="$PROJECT_DIR$/src/components/deals/result/DealsTable.scss" />
       </list>
     </option>
   </component>
@@ -319,12 +308,12 @@
       <workItem from="1561821928028" duration="17737000" />
       <workItem from="1562301323431" duration="61000" />
       <workItem from="1562758157691" duration="22130000" />
-      <workItem from="1562899254102" duration="4373000" />
+      <workItem from="1562899254102" duration="4886000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="243694000" />
+    <option name="totallyTimeSpent" value="244207000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1024" height="1129" extended-state="0" />
@@ -353,6 +342,15 @@
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="debuggerHistoryManager">
+    <expressions id="evaluateExpression">
+      <expression>
+        <expression-string>getResultUrl</expression-string>
+        <language-id>JavaScript</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+    </expressions>
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/components/home/Home.scss">
@@ -557,20 +555,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/deals/result/DealsTable.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="257">
-          <caret line="25" column="11" lean-forward="true" selection-start-line="25" selection-start-column="11" selection-end-line="25" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/deals/result/DealsRankingTable.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="269">
-          <caret line="23" column="3" lean-forward="true" selection-start-line="23" selection-start-column="3" selection-end-line="23" selection-end-column="3" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/components/common/CommonTabs.scss">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="105">
@@ -683,13 +667,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/stores/SearchStore.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="660">
-          <caret line="367" column="30" selection-start-line="367" selection-start-column="11" selection-end-line="367" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/api/index.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="461">
@@ -711,16 +688,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="342">
           <caret line="77" column="71" selection-start-line="77" selection-start-column="71" selection-end-line="77" selection-end-column="71" />
-          <folding>
-            <element signature="e#0#39#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/deals/result/DealsRankingTable.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="410">
-          <caret line="118" column="50" lean-forward="true" selection-start-line="118" selection-start-column="50" selection-end-line="118" selection-end-column="50" />
           <folding>
             <element signature="e#0#39#0" expanded="true" />
           </folding>
@@ -749,11 +716,42 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/components/redirect/Redirect.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="21" column="37" selection-start-line="21" selection-start-column="37" selection-end-line="21" selection-end-column="37" />
+        <state relative-caret-position="306">
+          <caret line="18" column="5" lean-forward="true" selection-start-line="18" selection-start-column="5" selection-end-line="18" selection-end-column="5" />
           <folding>
             <element signature="e#0#39#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/stores/SearchStore.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="468">
+          <caret line="125" column="18" selection-start-line="125" selection-start-column="18" selection-end-line="125" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/deals/result/DealsRankingTable.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="293">
+          <caret line="27" column="49" selection-start-line="27" selection-start-column="43" selection-end-line="27" selection-end-column="49" />
+          <folding>
+            <element signature="e#0#39#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/deals/result/DealsRankingTable.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" selection-start-line="7" selection-end-line="12" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/deals/result/DealsTable.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="223">
+          <caret line="23" column="3" selection-start-line="23" selection-start-column="3" selection-end-line="23" selection-end-column="3" />
         </state>
       </provider>
     </entry>
