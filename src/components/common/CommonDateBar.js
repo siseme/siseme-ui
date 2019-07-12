@@ -70,33 +70,45 @@ class CommonDateBar extends Component {
         const {searchStore} = this.props;
         return (
             <Spin spinning={searchStore.isDataLoding && searchStore.isRankingLoding}>
-            <div className="common-date-bar">
-                <div className="date-select">
-                    <Typography.Text type="secondary" className={this.state.range === 1 ? 'selected' : ''}
-                                     onClick={() => this.handleRangeDate(1)}>1개월</Typography.Text>
-                    <Typography.Text type="secondary" className={this.state.range === 3 ? 'selected' : ''}
-                                     onClick={() => this.handleRangeDate(3)}>3개월</Typography.Text>
-                    <Typography.Text type="secondary" className={this.state.range === 6 ? 'selected' : ''}
-                                     onClick={() => this.handleRangeDate(6)}>6개월</Typography.Text>
+                <div className="common-date-bar">
+                    <div style={{marginRight: 14}}>
+                        <Button.Group>
+                            <Button className="date-button" size="medium"
+                                    onClick={this.handleStartDateOpen}>{searchStore.startDate.format('YYYY.MM')}</Button>
+                            <Button className="date-button" size="medium"
+                                    onClick={this.handleEndDateOpen}>{searchStore.endDate.format('YYYY.MM')}</Button>
+                        </Button.Group>
+                        <CommonDatePicker value={searchStore.startDate.toDate()}
+                                          cancel={this.handleStartDateCancel}
+                                          isOpen={this.state.startDateOpen}
+                                          handleDate={this.handleStartDate}/>
+                        <CommonDatePicker value={searchStore.endDate.toDate()}
+                                          cancel={this.handleEndDateCancel}
+                                          isOpen={this.state.endDateOpen}
+                                          handleDate={searchStore.handleEndDate}/>
+                    </div>
+                    <div className="trade-select">
+                        <Typography.Text type="secondary"
+                                         className={searchStore.tradeType === 'trade' ? 'button selected' : 'button'}
+                                         onClick={() => this.handleTradeType('trade')}>실거래</Typography.Text>
+                        <Typography.Text type="secondary">|</Typography.Text>
+                        <Typography.Text type="secondary"
+                                         className={searchStore.tradeType === 'ticket' ? 'button selected' : 'button'}
+                                         onClick={() => this.handleTradeType('ticket')}>분양권</Typography.Text>
+                        <Typography.Text type="secondary">|</Typography.Text>
+                        <Typography.Text type="secondary"
+                                         className={searchStore.tradeType === 'rent' ? 'button selected' : 'button'}
+                                         onClick={() => this.handleTradeType('rent')}>전월세</Typography.Text>
+                    </div>
                 </div>
-                <div>
-                    <Button.Group size="large">
-                        <Button onClick={this.handleStartDateOpen}>{searchStore.startDate.format('YYYY.MM')}</Button>
-                        <Button onClick={this.handleEndDateOpen}>{searchStore.endDate.format('YYYY.MM')}</Button>
-                    </Button.Group>
-                    <CommonDatePicker value={searchStore.startDate.toDate()}
-                                      cancel={this.handleStartDateCancel}
-                                      isOpen={this.state.startDateOpen}
-                                      handleDate={this.handleStartDate}/>
-                    <CommonDatePicker value={searchStore.endDate.toDate()}
-                                      cancel={this.handleEndDateCancel}
-                                      isOpen={this.state.endDateOpen}
-                                      handleDate={searchStore.handleEndDate}/>
-                </div>
-            </div>
             </Spin>
         )
     }
+
+    handleTradeType = (tradeType) => {
+        const {searchStore} = this.props;
+        searchStore.handleTradeType(tradeType);
+    };
 }
 
 export default CommonDateBar;

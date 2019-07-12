@@ -11,6 +11,7 @@ class QueryTable extends Component {
         const {searchStore} = this.props;
         return (
             <List
+                className="query-table"
                 header={<Typography.Text strong>검색결과 {searchStore.searchList.length}개</Typography.Text>}
                 bordered
                 dataSource={searchStore.searchList}

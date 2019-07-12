@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import {inject, observer} from 'mobx-react/index';
-import {PageHeader, Spin, Table, Typography} from "antd";
+import {Button, Icon, PageHeader, Spin, Table, Typography} from "antd";
 
 import "./DealsRankingTable.scss";
 
@@ -13,7 +13,11 @@ class DealsRankingTable extends Component {
     };
 
     init = () => {
-        return {}
+        return {collapse: false}
+    };
+
+    handleCollapse = () => {
+        this.setState({collapse: !this.state.collapse});
     };
 
     render() {
@@ -22,26 +26,34 @@ class DealsRankingTable extends Component {
             <div className="deals-ranking-table">
                 <Spin spinning={searchStore.isRankingLoding}>
                     <PageHeader className="header"
-                                title="랭킹"
+                                title={<Typography.Text className="title">랭킹<Typography.Text className="collapse"
+                                                                                             type="secondary"
+                                                                                             onClick={this.handleCollapse}>{this.state.collapse ?
+                                    <Icon type="down"/> : <Icon type="up"/>}</Typography.Text></Typography.Text>}
                                 footer={
+                                    !this.state.collapse &&
                                     <div className="footer">
-                                        <Typography.Text onClick={() => searchStore.handleRankType('numberOfTradeRanks')}
-                                                         style={{marginRight: 12}}
-                                                         className={searchStore.rankType === 'numberOfTradeRanks' ? 'selected' : ''}>거래량</Typography.Text>
+                                        <Typography.Text
+                                            onClick={() => searchStore.handleRankType('numberOfTradeRanks')}
+                                            style={{marginRight: 12}}
+                                            className={searchStore.rankType === 'numberOfTradeRanks' ? 'selected' : ''}>거래량</Typography.Text>
                                         {
                                             searchStore.tradeType === 'trade' &&
-                                            <Typography.Text onClick={() => searchStore.handleRankType('numberOfNewHighPriceRanks')}
-                                                             style={{marginRight: 12}}
-                                                             className={searchStore.rankType === 'numberOfNewHighPriceRanks' ? 'selected' : ''}>신고가</Typography.Text>
+                                            <Typography.Text
+                                                onClick={() => searchStore.handleRankType('numberOfNewHighPriceRanks')}
+                                                style={{marginRight: 12}}
+                                                className={searchStore.rankType === 'numberOfNewHighPriceRanks' ? 'selected' : ''}>신고가</Typography.Text>
                                         }
                                         {
                                             searchStore.tradeType === 'trade' &&
-                                            <Typography.Text onClick={() => searchStore.handleRankType('unitPriceRanks')}
-                                                             className={searchStore.rankType === 'unitPriceRanks' ? 'selected' : ''}>평당가</Typography.Text>
+                                            <Typography.Text
+                                                onClick={() => searchStore.handleRankType('unitPriceRanks')}
+                                                className={searchStore.rankType === 'unitPriceRanks' ? 'selected' : ''}>평당가</Typography.Text>
                                         }
                                     </div>
                                 }/>
                     {
+                        !this.state.collapse &&
                         searchStore.tradeType === 'trade' &&
                         <Table className="table"
                                dataSource={this.filter(searchStore.rankResult)}

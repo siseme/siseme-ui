@@ -1,7 +1,9 @@
 .search-history-table {
+  background-color: white;
+  border: none;
+  border-radius: 0;
   .selected {
     background-color: #595959;
-    border: 1px solid #595959;
     span {
       color: #ffffff;
     }

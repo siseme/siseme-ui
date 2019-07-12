@@ -1,8 +1,21 @@
 .deals-tabs {
-  height: 45px;
-  border-left: 1px solid #e8e8e8;
-  border-right: 1px solid #e8e8e8;
+  background-color: white;
+  padding: 8px 14px;
   border-bottom: 1px solid #e8e8e8;
+
+  .button {
+    margin-right: 5px;
+    background-color: #F4F6FD;
+    border: 1px solid #F4F6FD;
+    width: 83.67px;
+  }
+
+  .selected {
+    background-color: #7896CB;
+    border: 1px solid #7896CB;
+    color: white;
+  }
+
   .row {
     height: 100%;
     a {
@@ -14,11 +27,6 @@
       width: 100%;
 
       font-size: 1rem;
-    }
-
-    .selected {
-      font-weight: 800;
-      border-bottom: 2px solid #595959;
     }
   }
 }
