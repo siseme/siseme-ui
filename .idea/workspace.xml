@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="ab4c054b-59f6-4fda-92eb-f68f548fad0a" name="Default Changelist" comment="">
+    <list default="true" id="d52627de-aa9d-4c9e-9aa6-1cccbe6ee447" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/src/components/deals/result/DealsChart.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/deals/result/DealsChart.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/deals/result/DealsRankingTable.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/deals/result/DealsRankingTable.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/stores/SearchStore.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/stores/SearchStore.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/deals/result/DealsTable.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/deals/result/DealsTable.scss" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -17,10 +18,10 @@
   <component name="FileEditorManager">
     <leaf>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/components/deals/result/DealsTable.scss">
+        <entry file="file://$PROJECT_DIR$/src/components/deals/result/DealsChart.scss">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="223">
-              <caret line="23" column="3" selection-start-line="23" selection-start-column="3" selection-end-line="23" selection-end-column="3" />
+            <state relative-caret-position="189">
+              <caret line="15" column="26" selection-start-line="15" selection-start-column="3" selection-end-line="15" selection-end-column="26" />
             </state>
           </provider>
         </entry>
@@ -29,8 +30,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>maxPriceFilter</find>
-      <find>handleMaxPriceFilter</find>
       <find>handleNewItemFilter</find>
       <find>this.handleNoneFilter</find>
       <find>this.state.maxPriceFilter</find>
@@ -44,7 +43,6 @@
       <find>실거래</find>
       <find>margin-right</find>
       <find>12px</find>
-      <find>거래 내역</find>
       <find>footer</find>
       <find>ㄱ</find>
       <find>랭킹</find>
@@ -59,6 +57,9 @@
       <find>size</find>
       <find>get</find>
       <find>getResult</find>
+      <find>거래 내역</find>
+      <find>width</find>
+      <find>ant-page-header-heading</find>
     </findStrings>
     <replaceStrings>
       <replace>item</replace>
@@ -110,7 +111,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/components/deals/search/region/region/common/RegionTable.js" />
         <option value="$PROJECT_DIR$/src/components/deals/search/region/region/AptTable.js" />
         <option value="$PROJECT_DIR$/src/components/deals/search/region/region/DongTable.js" />
         <option value="$PROJECT_DIR$/src/components/deals/search/region/region/GunguTable.js" />
@@ -159,8 +159,9 @@
         <option value="$PROJECT_DIR$/src/components/common/CommonDateBar.js" />
         <option value="$PROJECT_DIR$/src/components/redirect/Redirect.js" />
         <option value="$PROJECT_DIR$/src/stores/SearchStore.js" />
-        <option value="$PROJECT_DIR$/src/components/deals/result/DealsRankingTable.scss" />
         <option value="$PROJECT_DIR$/src/components/deals/result/DealsTable.scss" />
+        <option value="$PROJECT_DIR$/src/components/deals/result/DealsRankingTable.scss" />
+        <option value="$PROJECT_DIR$/src/components/deals/result/DealsChart.scss" />
       </list>
     </option>
   </component>
@@ -175,7 +176,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -215,17 +215,11 @@
               <item name="deals" type="462c0819:PsiDirectoryNode" />
               <item name="result" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="siseme-ui" type="b2602c69:ProjectViewProjectNode" />
-              <item name="siseme-ui" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="components" type="462c0819:PsiDirectoryNode" />
-              <item name="redirect" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
       <pane id="AndroidView" />
       <pane id="PackagesPane" />
     </panes>
@@ -241,19 +235,19 @@
     <property name="ts.external.directory.path" value="$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/src/components/home" />
-      <recent name="$PROJECT_DIR$/src/components/region/common" />
-      <recent name="$PROJECT_DIR$/src/components/common" />
-      <recent name="$PROJECT_DIR$/src/components/detail" />
-      <recent name="$PROJECT_DIR$/src/components/list" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/components/deals/search/region/data" />
       <recent name="$PROJECT_DIR$/src/components/deals/search" />
       <recent name="$PROJECT_DIR$/src/components/common" />
       <recent name="$PROJECT_DIR$/src/components/deals/search/region" />
       <recent name="$PROJECT_DIR$/src/components/deals/search/region/region" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/components/home" />
+      <recent name="$PROJECT_DIR$/src/components/region/common" />
+      <recent name="$PROJECT_DIR$/src/components/common" />
+      <recent name="$PROJECT_DIR$/src/components/detail" />
+      <recent name="$PROJECT_DIR$/src/components/list" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -313,20 +307,20 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="244207000" />
+    <option name="totallyTimeSpent" value="244413000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="1024" height="1129" extended-state="0" />
+    <frame x="0" y="23" width="1440" height="877" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.75628626" visible="true" weight="0.19740778" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.7544484" visible="true" weight="0.19732206" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info id="npm" order="2" sideWeight="0.24371374" side_tool="true" weight="0.1987315" />
+      <window_info id="npm" order="2" sideWeight="0.2455516" side_tool="true" weight="0.19732206" />
       <window_info id="Favorites" order="3" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32690454" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.32690454" />
-      <window_info active="true" anchor="bottom" id="Debug" order="3" visible="true" weight="0.30858245" />
+      <window_info anchor="bottom" id="Debug" order="3" visible="true" weight="0.30819246" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -334,7 +328,7 @@
       <window_info anchor="bottom" id="Version Control" order="8" weight="0.32899868" />
       <window_info anchor="bottom" id="TypeScript" order="9" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
-      <window_info anchor="bottom" id="Terminal" order="11" weight="0.27000964" />
+      <window_info anchor="bottom" id="Terminal" order="11" weight="0.26918074" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -353,13 +347,6 @@
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/components/home/Home.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="21">
-          <caret line="1" column="2" selection-start-line="1" selection-start-column="2" selection-end-line="1" selection-end-column="2" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/components/list/DealsSearch.scss" />
     <entry file="file://$PROJECT_DIR$/src/components/list/DealsSearch.js" />
     <entry file="file://$PROJECT_DIR$/src/components/deals/search/region/RegionBar.scss">
@@ -620,16 +607,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/deals/result/DealsTable.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="717">
-          <caret line="69" column="43" selection-start-line="69" selection-start-column="43" selection-end-line="69" selection-end-column="43" />
-          <folding>
-            <element signature="e#0#39#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/components/search/SearchContainer.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="119">
@@ -741,17 +718,31 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/deals/result/DealsRankingTable.scss">
+    <entry file="file://$PROJECT_DIR$/src/components/deals/result/DealsTable.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" selection-start-line="7" selection-end-line="12" selection-end-column="3" />
+        <state relative-caret-position="38">
+          <caret line="5" column="16" selection-start-line="5" selection-start-column="16" selection-end-line="5" selection-end-column="16" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/components/deals/result/DealsTable.scss">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="223">
-          <caret line="23" column="3" selection-start-line="23" selection-start-column="3" selection-end-line="23" selection-end-column="3" />
+        <state relative-caret-position="147">
+          <caret line="7" selection-start-line="7" selection-end-line="19" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/deals/result/DealsRankingTable.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="371">
+          <caret line="19" column="3" selection-start-line="19" selection-start-column="3" selection-end-line="19" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/deals/result/DealsChart.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="189">
+          <caret line="15" column="26" selection-start-line="15" selection-start-column="3" selection-end-line="15" selection-end-column="26" />
         </state>
       </provider>
     </entry>
