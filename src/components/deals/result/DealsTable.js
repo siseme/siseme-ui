@@ -14,10 +14,17 @@ class DealsTable extends Component {
     };
 
     init = () => {
-        return {collapse: false}
+        let collapse = localStorage.getItem('collapse.list');
+        if (!collapse) {
+            collapse = false;
+        } else {
+            collapse = JSON.parse(collapse);
+        }
+        return {collapse: collapse}
     };
 
     handleCollapse = () => {
+        localStorage.setItem('collapse.list', JSON.stringify(!this.state.collapse));
         this.setState({collapse: !this.state.collapse});
     };
 

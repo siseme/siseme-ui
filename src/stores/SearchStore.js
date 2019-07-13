@@ -28,6 +28,7 @@ export default class SearchStore {
     // trade
     @observable isDataLoding = false;
     @observable isRankingLoding = false;
+    @observable isChartLoading = false;
     @observable dealsList = [];
     @observable resultCount = {
         newItemCount: 0,
@@ -43,8 +44,12 @@ export default class SearchStore {
     @observable tradeType = 'trade';
     // numberOfTradeRanks numberOfNewHighPriceRanks unitPriceRanks
     @observable rankType = 'numberOfTradeRanks';
+    @observable chartType = 'count';
     @observable newItemFilter = false;
     @observable maxPriceFilter = false;
+
+    //
+    @observable chart = {priceData: [], countData: []};
 
     constructor(root) {
         this.root = root;
@@ -108,6 +113,11 @@ export default class SearchStore {
     @computed
     get getMaxPriceDealsSize() {
         return this.dealsList.contents ? this.dealsList.contents.filter(x => x.price > x.pastMaxPrice).length : 0;
+    };
+
+    @action
+    handleChartType = (value) => {
+        this.chartType = value;
     };
 
     @action
@@ -284,6 +294,7 @@ export default class SearchStore {
     async* getDealsList() {
         if (this.getRegion !== null) {
             this.isDataLoding = true;
+            this.getStats();
             this.handleNoneFilter();
             this.getCount();
             this.getTradeRanks();
@@ -363,6 +374,126 @@ export default class SearchStore {
     async* getRegionByFullName(fullName) {
         let region = yield api.getRegionByFullName(fullName).then(result => result.data);
         yield this.handleRegion(region);
+    }
+
+    @asyncAction
+    async* getStats() {
+        this.isChartLoading = true;
+        let result = yield api.getCountStats(this.tradeType, this.getRegion.code, this.endDate.format('YYYYMM')).then(res => res.data);
+        let type1List = result.type1TradeStatsList;
+        let type2List = result.type2TradeStatsList;
+        let type3List = result.type3TradeStatsList;
+        let type4List = result.type4TradeStatsList;
+        let type5List = result.type5TradeStatsList;
+
+        let totalDateList = type1List.map(x => x.date.slice(0, 4) + '-' + x.date.slice(4, 8) + '-01');
+        if (totalDateList.length === 0) {
+            totalDateList = type2List.map(x => x.date.slice(0, 4) + '-' + x.date.slice(4, 8) + '-01');
+        }
+        if (totalDateList.length === 0) {
+            totalDateList = type3List.map(x => x.date.slice(0, 4) + '-' + x.date.slice(4, 8) + '-01');
+        }
+        if (totalDateList.length === 0) {
+            totalDateList = type4List.map(x => x.date.slice(0, 4) + '-' + x.date.slice(4, 8) + '-01');
+        }
+        if (totalDateList.length === 0) {
+            totalDateList = type5List.map(x => x.date.slice(0, 4) + '-' + x.date.slice(4, 8) + '-01');
+        }
+        totalDateList.unshift('날짜');
+
+        let type1PriceList = type1List.map(x => x.sumMainPrice !== 0 ? (x.sumMainPrice / x.count).toFixed(0) : null);
+        type1PriceList.unshift('초소형(49m²이하)');
+        let type2PriceList = type2List.map(x => x.sumMainPrice !== 0 ? (x.sumMainPrice / x.count).toFixed(0) : null);
+        type2PriceList.unshift('소형(49m²초과~60m²이하)');
+        let type3PriceList = type3List.map(x => x.sumMainPrice !== 0 ? (x.sumMainPrice / x.count).toFixed(0) : null);
+        type3PriceList.unshift('중형(60m²초과~85m²이하)');
+        let type4PriceList = type4List.map(x => x.sumMainPrice !== 0 ? (x.sumMainPrice / x.count).toFixed(0) : null);
+        type4PriceList.unshift('중대형(85m²초과~135m²이하)');
+        let type5PriceList = type5List.map(x => x.sumMainPrice !== 0 ? (x.sumMainPrice / x.count).toFixed(0) : null);
+        type5PriceList.unshift('대형(135m²초과)');
+
+        let type0PriceList = [];
+        for (let i = 1; i < totalDateList.length; i++) {
+            let sum = 0;
+            let sumCount = 0;
+            if (type1PriceList[i]) {
+                sum += type1PriceList[i] * 1;
+                sumCount++;
+            }
+            if (type2PriceList[i]) {
+                sum += type2PriceList[i] * 1;
+                sumCount++;
+            }
+            if (type3PriceList[i]) {
+                sum += type3PriceList[i] * 1;
+                sumCount++;
+            }
+            if (type4PriceList[i]) {
+                sum += type4PriceList[i] * 1;
+                sumCount++;
+            }
+            if (type5PriceList[i]) {
+                sum += type5PriceList[i] * 1;
+                sumCount++;
+            }
+            sum = sum !== 0 ? sum / sumCount : 0;
+            type0PriceList.push(sum.toFixed(0));
+        }
+        type0PriceList.unshift('전체평균');
+
+        let type1CountList = type1List.map(x => x.count);
+        type1CountList.unshift('초소형(49m²이하)');
+        let type2CountList = type2List.map(x => x.count);
+        type2CountList.unshift('소형(49m²초과~60m²이하)');
+        let type3CountList = type3List.map(x => x.count);
+        type3CountList.unshift('중형(60m²초과~85m²이하)');
+        let type4CountList = type4List.map(x => x.count);
+        type4CountList.unshift('중대형(85m²초과~135m²이하)');
+        let type5CountList = type5List.map(x => x.count);
+        type5CountList.unshift('대형(135m²초과)');
+
+        let type0CountList = [];
+        for (let i = 1; i < totalDateList.length; i++) {
+            let sum = 0;
+            if (type1CountList[i]) {
+                sum += type1CountList[i] * 1;
+            }
+            if (type2CountList[i]) {
+                sum += type2CountList[i] * 1;
+            }
+            if (type3CountList[i]) {
+                sum += type3CountList[i] * 1;
+            }
+            if (type4CountList[i]) {
+                sum += type4CountList[i] * 1;
+            }
+            if (type5CountList[i]) {
+                sum += type5CountList[i] * 1;
+            }
+            type0CountList.push(sum);
+        }
+        type0CountList.unshift('총 거래건수');
+
+        let columns = [];
+        columns.push(totalDateList);
+        columns.push(type1PriceList);
+        columns.push(type2PriceList);
+        columns.push(type3PriceList);
+        columns.push(type4PriceList);
+        columns.push(type5PriceList);
+        columns.push(type0PriceList);
+
+        let countColumns = [];
+        countColumns.push(totalDateList);
+        countColumns.push(type1CountList);
+        countColumns.push(type2CountList);
+        countColumns.push(type3CountList);
+        countColumns.push(type4CountList);
+        countColumns.push(type5CountList);
+        countColumns.push(type0CountList);
+
+        this.chart = {priceData: columns, countData: countColumns};
+        this.isChartLoading = false;
     };
 
     initDong = () => {

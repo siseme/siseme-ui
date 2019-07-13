@@ -1,5 +1,6 @@
-.deals-list {
+.deals-chart {
   border-top: 13px solid #fafafa;
+  border-bottom: 1px solid #e8e8e8;
 
   .ant-page-header {
     border-radius: 0 !important;
@@ -23,13 +24,6 @@
     }
   }
 
-  .ant-page-header-heading {
-    width: 100%;
-    .ant-page-header-heading-title {
-      width: 100%;
-    }
-  }
-
   .search {
     display: flex;
     flex-direction: column;
@@ -39,43 +33,23 @@
   }
 
   .header {
-    border-bottom: 1px solid #e8e8e8;
     border-radius: 4px;
     .ant-page-header-title-view-extra {
       margin-top: 2px;
     }
-
-    .selected {
-      font-weight: 800;
-      border-bottom: 2px solid #595959;
-    }
-
     .footer {
       margin-left: 8px;
-      margin-bottom: 10px;
-      display: flex;
-      justify-content: space-between;
+      padding-bottom: 15px;
 
-      .trade-type {
-
-      }
-
-      .order-type {
-
+      .selected {
+        font-weight: 800;
+        border-bottom: 2px solid #595959;
       }
     }
   }
 
-  .table {
-    background-color: white;
-    /*
-    border-left: 1px solid #e8e8e8;
-    border-right: 1px solid #e8e8e8;
-    border-bottom: 1px solid #e8e8e8;
-    */
-
-    .ant-table-small {
-      border: none;
-    }
+  .body {
+    background-color: #ffffff;
+    padding-bottom: 10px;
   }
 }

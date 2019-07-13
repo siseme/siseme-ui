@@ -56,6 +56,14 @@ export const api = {
     getRegionByFullName: (fullName) => {
         return get('http://15.164.200.252/dev/api/v2/search/regions/name/' + fullName, {});
     },
+    getCountStats: (tradeType, regionCode, endDate) => {
+        let params = {
+            "tradeType": tradeType,
+            "regionCode": regionCode,
+            "date": endDate,
+        };
+        return get('http://15.164.200.252/dev/api/v2/trade/stats', params);
+    },
     query: (keyword) => {
         let params = {
             "keyword": keyword

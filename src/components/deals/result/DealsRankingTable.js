@@ -13,10 +13,17 @@ class DealsRankingTable extends Component {
     };
 
     init = () => {
-        return {collapse: false}
+        let collapse = localStorage.getItem('collapse.ranking');
+        if (!collapse) {
+            collapse = false;
+        } else {
+            collapse = JSON.parse(collapse);
+        }
+        return {collapse: collapse}
     };
 
     handleCollapse = () => {
+        localStorage.setItem('collapse.ranking', JSON.stringify(!this.state.collapse));
         this.setState({collapse: !this.state.collapse});
     };
 
