@@ -10,7 +10,7 @@ class DealsTabs extends Component {
     render() {
         const {searchStore} = this.props;
         return (
-            <Spin spinning={searchStore.isDataLoding && searchStore.isRankingLoding}>
+            <Spin spinning={searchStore.isRankingLoding && searchStore.isDataLoding && searchStore.isRankingLoding}>
                 <div className="deals-tabs">
                     <div>
                         <Button className="button" size="medium"

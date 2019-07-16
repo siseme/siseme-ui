@@ -53,7 +53,7 @@ class DealsChart extends Component {
                                     </div>
                                 }/>
                     {
-                        !this.state.collapse &&
+                        !searchStore.isRankingLoding && !this.state.collapse &&
                         <div className="body">
                             {
                                 searchStore.chartType === 'count' &&
