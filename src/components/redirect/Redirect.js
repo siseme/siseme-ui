@@ -37,6 +37,7 @@ class Redirect extends Component {
         searchStore.handleStartDate(startDate);
         searchStore.handleEndDate(endDate);
         searchStore.handleTradeType(tradeTypeName);
+        searchStore.getDealsList();
         history.push('/');
     };
 }
