@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import AdSense from 'react-adsense';
 import {inject, observer} from 'mobx-react/index';
 import {Button, Icon, PageHeader, Spin, Table, Typography} from "antd";
 
@@ -30,6 +31,14 @@ class DealsRankingTable extends Component {
     render() {
         const {searchStore} = this.props;
         return (
+            <React.Fragment>
+                <AdSense.Google
+                    client='ca-pub-7358131203333812'
+                    slot='1000729200'
+                    style={{display: 'block'}}
+                    format='auto'
+                    responsive='true'
+                />
             <div className="deals-ranking-table">
                 <Spin spinning={searchStore.isRankingLoding}>
                     <PageHeader className="header"
@@ -227,6 +236,7 @@ class DealsRankingTable extends Component {
                     }
                 </Spin>
             </div>
+            </React.Fragment>
         )
     }
 

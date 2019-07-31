@@ -12,6 +12,7 @@
     "moment": "^2.24.0",
     "node-sass": "^4.12.0",
     "react": "^16.8.6",
+    "react-adsense": "^0.1.0",
     "react-billboardjs": "^1.5.3",
     "react-dom": "^16.8.6",
     "react-infinite-scroller": "^1.2.4",
