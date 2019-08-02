@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d52627de-aa9d-4c9e-9aa6-1cccbe6ee447" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/src/components/redirect/Redirect.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/redirect/Redirect.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/stores/SearchStore.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/stores/SearchStore.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -21,8 +20,8 @@
           <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/components/redirect/Redirect.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="471">
-                  <caret line="35" selection-start-line="35" selection-end-line="35" />
+                <state relative-caret-position="532">
+                  <caret line="35" column="19" selection-start-line="35" selection-start-column="8" selection-end-line="35" selection-end-column="19" />
                   <folding>
                     <element signature="e#0#39#0" expanded="true" />
                   </folding>
@@ -37,8 +36,8 @@
           <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/stores/SearchStore.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="326">
-                  <caret line="121" column="29" selection-start-line="121" selection-start-column="29" selection-end-line="121" selection-end-column="29" />
+                <state relative-caret-position="377">
+                  <caret line="124" column="12" selection-start-line="124" selection-start-column="12" selection-end-line="124" selection-end-column="12" />
                 </state>
               </provider>
             </entry>
@@ -49,7 +48,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>랭킹</find>
       <find>collapse</find>
       <find>border-bottom</find>
       <find>up</find>
@@ -79,6 +77,7 @@
       <find>redirect</find>
       <find>handleStartDate</find>
       <find>handleTradeType</find>
+      <find>searchStore</find>
     </findStrings>
     <replaceStrings>
       <replace>rootStore.summaryPath.</replace>
@@ -179,8 +178,8 @@
         <option value="$PROJECT_DIR$/package.json" />
         <option value="$PROJECT_DIR$/src/components/deals/result/DealsResultContainer.js" />
         <option value="$PROJECT_DIR$/src/components/deals/result/DealsRankingTable.js" />
-        <option value="$PROJECT_DIR$/src/stores/SearchStore.js" />
         <option value="$PROJECT_DIR$/src/components/redirect/Redirect.js" />
+        <option value="$PROJECT_DIR$/src/stores/SearchStore.js" />
       </list>
     </option>
   </component>
@@ -334,7 +333,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="250349000" />
+    <option name="totallyTimeSpent" value="250452000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="2048" height="1129" extended-state="6" />
@@ -345,7 +344,7 @@
       <window_info id="npm" order="2" sideWeight="0.2455516" side_tool="true" weight="0.19732206" />
       <window_info id="Favorites" order="3" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info active="true" anchor="bottom" id="Find" order="1" visible="true" weight="0.32690454" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32690454" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.32690454" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.30761814" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
@@ -355,7 +354,7 @@
       <window_info anchor="bottom" id="Version Control" order="8" weight="0.32899868" />
       <window_info anchor="bottom" id="TypeScript" order="9" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
-      <window_info anchor="bottom" id="Terminal" order="11" weight="0.26904532" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="11" visible="true" weight="0.26904532" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -785,20 +784,20 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/stores/SearchStore.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="326">
-          <caret line="121" column="29" selection-start-line="121" selection-start-column="29" selection-end-line="121" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/components/redirect/Redirect.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="471">
-          <caret line="35" selection-start-line="35" selection-end-line="35" />
+        <state relative-caret-position="532">
+          <caret line="35" column="19" selection-start-line="35" selection-start-column="8" selection-end-line="35" selection-end-column="19" />
           <folding>
             <element signature="e#0#39#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/stores/SearchStore.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="377">
+          <caret line="124" column="12" selection-start-line="124" selection-start-column="12" selection-end-line="124" selection-end-column="12" />
         </state>
       </provider>
     </entry>

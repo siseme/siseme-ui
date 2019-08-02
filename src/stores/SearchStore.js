@@ -122,7 +122,7 @@ export default class SearchStore {
         this.startDate = new moment(startDate);
         this.endDate = new moment(endDate);
         this.tradeType = tradeType;
-        searchStore.getDealsList();
+        this.getDealsList();
     };
 
     @action
