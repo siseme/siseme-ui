@@ -115,6 +115,16 @@ export default class SearchStore {
         return this.dealsList.contents ? this.dealsList.contents.filter(x => x.price > x.pastMaxPrice).length : 0;
     };
 
+    @asyncAction
+    async* redirect(fullName, startDate, endDate, tradeType) {
+        let region = yield api.getRegionByFullName(fullName).then(result => result.data);
+        yield this.handleRegion(region);
+        this.startDate = new moment(startDate);
+        this.endDate = new moment(endDate);
+        this.tradeType = tradeType;
+        searchStore.getDealsList();
+    };
+
     @action
     handleChartType = (value) => {
         this.chartType = value;

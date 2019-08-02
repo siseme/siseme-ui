@@ -33,11 +33,7 @@ class Redirect extends Component {
         let dateParams = pathname.substring(pathname.indexOf('(')+1, pathname.indexOf(')'));
         let startDate = moment(dateParams.substring(0, dateParams.indexOf('~')), 'YYYY년MM월');
         let endDate = moment(dateParams.substring(dateParams.indexOf('~')+1, dateParams.length), 'YYYY년MM월');
-        searchStore.getRegionByFullName(regionFullName);
-        searchStore.handleStartDate(startDate);
-        searchStore.handleEndDate(endDate);
-        searchStore.handleTradeType(tradeTypeName);
-        searchStore.getDealsList();
+        searchStore.redirect(regionFullName, startDate, endDate, tradeTypeName);
         history.push('/');
     };
 }
