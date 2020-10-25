@@ -8,10 +8,10 @@ class SidoTable extends Component {
     render() {
         const {searchStore} = this.props;
         return (
-            <RegionTable allRegionType={false}
-                         item={searchStore.sido}
-                         itemList={searchStore.sidoList}
-                         handleClick={this.handleSidoClick}/>
+              <RegionTable allRegionType={false}
+                           item={searchStore.sido}
+                           itemList={searchStore.sidoList}
+                           handleClick={this.handleSidoClick}/>
         )
     }
 

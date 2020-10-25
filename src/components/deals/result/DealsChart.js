@@ -5,6 +5,7 @@ import {Button, Icon, PageHeader, Spin, Table, Typography} from "antd";
 import "./DealsChart.scss";
 import DealsCountChart from "./DealsCountChart";
 import DealsPriceChart from "./DealsPriceChart";
+import { Helmet } from "react-helmet";
 
 @inject('searchStore')
 @observer

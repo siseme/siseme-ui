@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import {inject, observer} from 'mobx-react/index';
 import {Icon, PageHeader, Spin, Table, Typography} from "antd";
 import InfiniteScroll from 'react-infinite-scroller';
+import Coupang from '../search/region/Coupang';
 
 import "./DealsTable.scss";
 
@@ -89,7 +90,7 @@ class DealsTable extends Component {
                                 title="날짜"
                                 dataIndex="date"
                                 key="date"
-                                width="20%"
+                                width="18%"
                                 render={(date, record) => (
                                     <span>{date.substring(0, 4)}
                                         <br/>
@@ -102,7 +103,7 @@ class DealsTable extends Component {
                                 title="지역"
                                 dataIndex="regionName"
                                 key="regionName"
-                                width="20%"
+                                width="18%"
                                 render={regionName => (
                                     <span>{regionName}</span>
                                 )}
@@ -112,9 +113,19 @@ class DealsTable extends Component {
                                 title="단지"
                                 dataIndex="name"
                                 key="name"
-                                width="23%"
+                                width="21%"
                                 render={name => (
                                     <span>{name}</span>
+                                )}
+                            />
+                            <Table.Column
+                                align="center"
+                                title="층"
+                                dataIndex="floor"
+                                key="floor"
+                                width="10%"
+                                render={floor => (
+                                    <span>{floor}</span>
                                 )}
                             />
                             <Table.Column
@@ -122,7 +133,7 @@ class DealsTable extends Component {
                                 title="전용m²"
                                 dataIndex="area"
                                 key="area"
-                                width="18%"
+                                width="16%"
                                 render={area => (
                                     <span>{(area * 1).toFixed(2)}</span>
                                 )}
@@ -134,7 +145,7 @@ class DealsTable extends Component {
                                         title="가격"
                                         dataIndex="price"
                                         key="price"
-                                        width="19%"
+                                        width="17%"
                                         render={(price, record) => (
                                             <span>
                                                         <Typography.Text>{this.numberWithCommas(price)}</Typography.Text>
@@ -155,7 +166,7 @@ class DealsTable extends Component {
                                         title="가격"
                                         dataIndex="price"
                                         key="price"
-                                        width="19%"
+                                        width="17%"
                                         render={(price, record) => (
                                             <span>
                                                         <Typography.Text type={price > record.pastMaxPrice && 'danger'}

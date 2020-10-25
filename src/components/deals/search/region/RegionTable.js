@@ -1,5 +1,6 @@
 import React from 'react';
 import {Button, Col, Row} from "antd";
+import Coupang from "./Coupang";
 
 import "./RegionTable.scss";
 
@@ -10,6 +11,8 @@ const ALL = {
 
 function RegionTable(props) {
     return (
+      <div>
+        <Coupang/>
         <Row className="region-list">
             {
                 props.allRegionType &&
@@ -29,6 +32,7 @@ function RegionTable(props) {
                 ))
             }
         </Row>
+        </div>
     );
 }
 
