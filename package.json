@@ -15,7 +15,7 @@
     "react-dom": "^16.8.6",
     "react-naver-maps": "^0.0.13",
     "react-router-dom": "^5.0.0",
-    "react-scripts": "3.0.1",
+    "react-scripts": "5.0.1",
     "react-infinite-scroller": "^1.2.4"
   },
   "scripts": {
